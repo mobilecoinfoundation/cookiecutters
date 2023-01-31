@@ -1,11 +1,12 @@
 # rust-workspace-cookiecutter
+
 A [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/) for creating a
 rust workspace.
 
 ## Usage
 
-
 ### New Repository
+
 If starting locally one can do:
 
 ```console
@@ -31,7 +32,7 @@ git add .
 git commit
 ```
 
-## Settings 
+## Settings
 
 ### repo\_name
 
