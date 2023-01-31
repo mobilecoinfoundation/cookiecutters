@@ -1,0 +1,17 @@
+{
+  "repo_name": "repository",
+  "workspace_description": "A brief summary of the workspace",
+  "workspace_readme_title": "MobileCoin: {{ cookiecutter.workspace_description }}",
+  "crate_name": "mc-crate-name",
+  "crate_namespace_prefix": "mc-",
+  "crate_description": "A brief summary of the crate",
+  "crate_readme_title": "MobileCoin: {{ cookiecutter.crate_description }}",
+  "crate_sub_dir": "{{ cookiecutter.crate_name.lower().partition(cookiecutter.crate_namespace_prefix)[-1].replace('-','/') }}",
+  "version": "0.1.0",
+  "crate_keywords": "'blockchain', 'serde'",
+  "crate_categories": "'cryptography', 'no-std'",
+  "_copy_without_render": [
+      ".github/**"
+  ]
+}
+

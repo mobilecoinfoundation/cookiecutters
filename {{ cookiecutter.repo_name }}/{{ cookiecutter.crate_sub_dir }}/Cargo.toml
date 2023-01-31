@@ -1,0 +1,16 @@
+[package]
+name = "{{ cookiecutter.crate_name }}"
+version = "{{ cookiecutter.version }}"
+authors = ["MobileCoin"]
+# See https://crates.io/categories for the common of categories
+categories = [{{ cookiecutter.crate_categories.replace("'", '"') }}]
+description = "{{ cookiecutter.crate_description }}"
+edition = "2021"
+# See https://crates.io/keywords for the common keywords
+keywords = [{{ cookiecutter.crate_keywords.replace("'", '"') }}]
+license = "Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/mobilecoinfoundation/{{ cookiecutter.repo_name }}"
+rust-version = "1.62.1"
+
+[dependencies]
