@@ -1,5 +1,6 @@
 # rust-workspace-cookiecutter
-A cookie cutter for creating a rust workspace
+A [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/) for creating a
+rust workspace.
 
 ## Usage
 
