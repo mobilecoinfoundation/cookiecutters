@@ -86,7 +86,7 @@ The
 field in initial crate's Cargo.toml. See <https://crates.io/keywords> for valid
 keywords. Entered as a space separated list of values.
 
-### crate\categories
+### crate\_categories
 
 The
 [`categories`](https://doc.rust-lang.org/cargo/reference/manifest.html#the-categories-field)
