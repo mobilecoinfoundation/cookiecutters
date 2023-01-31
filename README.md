@@ -1,6 +1,35 @@
 # rust-workspace-cookiecutter
 A cookie cutter for creating a rust workspace
 
+## Usage
+
+
+### New Repository
+If starting locally one can do:
+
+```console
+cookiecutter gh:nick-mobilecoin/rust-workspace-cookiecutter
+cd <repo_name>
+git init
+git add .
+git commit
+```
+
+This will create the rust workspace, and initialize it with a git repository.
+
+### Pre-existing Repository
+
+If one already created a git repository and wishes to initialize with the
+cookiecutter:
+
+```console
+git clone <url_to_repo>
+cookiecutter gh:nick-mobilecoin/rust-workspace-cookiecutter --overwrite-if-exists
+cd <repo_name>
+git add .
+git commit
+```
+
 ## Settings 
 
 repo\_name: The repository name. Will be used for the output directory. For
