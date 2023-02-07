@@ -11,3 +11,5 @@ jobs:
       pull-requests: write
     steps:
       - uses: kentaro-m/auto-assign-action@v1.2.4
+        with:
+          configuration-path: '.github/auto_assign.yaml'

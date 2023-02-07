@@ -8,5 +8,5 @@ dependencies:
 
 github_actions:
   - '.github/workflows/**'
-  - '.github/labeler.yml'
-  - '.github/triage-labeler.yml'
+  - '.github/labeler.yaml'
+  - '.github/triage-labeler.yaml'
