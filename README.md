@@ -105,9 +105,9 @@ isolated python environment. The `cookiecutter` documented installation,
 dependencies into the system or user python environment.
 
 > Note:
-> The following suggested install is isolated to the current user. This means no
-> use of `sudo` is necessary. Using `sudo` with these specific commands will
-> almost certainly cause issues.
+> The following suggested install is isolated to the current user. This means
+> the use `sudo` is not needed, or recommended. Using `sudo` with these specific
+> commands will almost certainly cause issues.
 
 Install pipx:
 
