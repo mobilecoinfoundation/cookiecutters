@@ -13,7 +13,7 @@ jobs:
     - uses: github/issue-labeler@v2.6
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
-        configuration-path: .github/triage-labeler.yml
+        configuration-path: .github/triage-labeler.yaml
         enable-versioned-regex: 0
 
   add-to-project:

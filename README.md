@@ -93,3 +93,33 @@ The
 [`categories`](https://doc.rust-lang.org/cargo/reference/manifest.html#the-categories-field)
 field in the initial crate's Cargo.toml.  See <https://crates.io/category_slugs>
 for valid categories. Entered as a space separated list of values.
+
+## Installing cookiecutter
+
+To install [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/)
+consider using something like [pipx](https://pypa.github.io/pipx/).
+
+The advantage to using `pipx` is that `cookiecutter` will be installed in an
+isolated python environment. The `cookiecutter` documented installation,
+<https://cookiecutter.readthedocs.io/en/stable/installation.html>, will pull
+dependencies into the system or user python environment.
+
+> Note:
+> The following suggested install is isolated to the current user. This means
+> the use `sudo` is not needed, or recommended. Using `sudo` with these specific
+> commands will almost certainly cause issues.
+
+Install pipx:
+
+```console
+python3 -m pip install --user pipx
+python3 -m pipx ensurepath
+```
+
+Restart your terminal
+
+Install cookiecutter:
+
+```console
+pipx install cookiecutter
+```
