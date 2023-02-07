@@ -35,7 +35,7 @@ workspace.
 > This assumes one has already [installed](#installing-cookiecutter)
 > `cookiecutter`.
 
-Invoking cookiecutter with this repositories URL,
+Invoking cookiecutter with this repository's URL,
 `gh:nick-mobilecoin/rust-workspace-cookiecutter` will begin the process of
 creating a workspace using the template.  
 
@@ -43,7 +43,7 @@ The first line is the `cookiecutter` invocation. The subsequent lines are
 prompts from `cookiecutter`.
 
 ```console
-cookiecutter gh:nick-mobilecoin/rust-workspace-cookiecutter
+> cookiecutter gh:nick-mobilecoin/rust-workspace-cookiecutter
 
 repo_name [repository]: a_new_repo
 workspace_description [A brief summary of the workspace]: My entered description of `a_new_repo`
@@ -58,13 +58,13 @@ crate_keywords [blockchain serde]: no-std async cli
 crate_categories [cryptography no-std]: api-bindings database gui
 ```
 
-We can break down one of the line prompts:
+Each prompt follows a similar patter.
 
 ```console
 repo_name [repository]: a_new_repo
 ```
 
-The above line can be broken down into:
+The above prompt can be broken down into:
 
 - `repo_name`: is the [setting](#settings) that `cookiecutter` is asking for.
 - `[repository]`: the default value `cookiecutter` will use if nothing is
@@ -78,11 +78,10 @@ crate_namespace_prefix [mc-]:
 ```
 
 The default namespace prefix of `mc-` was chosen. As mentioned in
-[`crate_namespace_prefix`](#crate\_namespace\_prefix), this will be removed from
-the crate name of `mc-an-initial-crate` to create the directory structure used
-for the crate, `an-initial-crate`. This will further be converted from kebab
-case to a path resulting in the default value of `an/initial/crate` suggested
-for `crate_sub_dir`.
+[`crate_namespace_prefix`](#crate\_namespace\_prefix), `mc-` will be removed from
+the crate name of `mc-an-initial-crate` resulting in `an-initial-crate`. This
+will further be converted from kebab case to a path resulting in the default
+value of `an/initial/crate` being suggested for the `crate_sub_dir` prompt.
 
 ### Output
 
@@ -126,12 +125,13 @@ a_new_repo
 
 Some things to point out:
 
-- There is a `.github` directory setup with some ready to go Github actions.
+- There is a `.github` directory with some ready to go Github actions.
   Pushing this up as the main branch on a Github repository would start running
   these actions
 - An initial rust crate was created in `an/initial/crate`. This is similar to
-  creating a rust crate with `cargo  new --lib` with the addition of a
-  `README.md`.
+  creating a rust crate with `cargo  new --lib`.
+- The initial rust crate will be listed in the root `Cargo.toml` `workspace`
+  property.
 
 ## Installing cookiecutter
 
@@ -139,9 +139,7 @@ To install [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/)
 consider using something like [pipx](https://pypa.github.io/pipx/).
 
 The advantage to using `pipx` is that `cookiecutter` will be installed in an
-isolated python environment. The `cookiecutter` documented installation,
-<https://cookiecutter.readthedocs.io/en/stable/installation.html>, will pull
-dependencies into the system or user python environment.
+isolated python environment. 
 
 > Note:
 > The following suggested install is isolated to the current user. This means
@@ -163,6 +161,11 @@ Install cookiecutter:
 pipx install cookiecutter
 ```
 
+There is alternate installation instructions provided by the `cookiecutter`
+docs, <https://cookiecutter.readthedocs.io/en/stable/installation.html>. Using
+this method will pull `cookiecutter` dependencies into the system or user python
+environment.
+
 ## Usage
 
 ### New Repository
@@ -171,6 +174,8 @@ If starting locally one can do:
 
 ```console
 cookiecutter gh:nick-mobilecoin/rust-workspace-cookiecutter
+... prompts
+
 cd <repo_name>
 git init
 git add .
