@@ -3,8 +3,8 @@
 A [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/) for creating a
 rust workspace.
 
+## Table of Contents
 
-# Table of Contents
 - [Walkthrough](#walkthrough)
   - [Invocation](#invocation)
   - [Output](#output)
@@ -28,7 +28,7 @@ rust workspace.
 ## Walkthrough
 
 We'll show how one might use this cookiecutter template to create a new rust
-workspace. 
+workspace.
 
 ### Invocation
 
@@ -40,7 +40,7 @@ Invoking cookiecutter with this repositories URL,
 creating a workspace using the template.  
 
 The first line is the `cookiecutter` invocation. The subsequent lines are
-prompts from `cookiecutter`. 
+prompts from `cookiecutter`.
 
 ```console
 cookiecutter gh:nick-mobilecoin/rust-workspace-cookiecutter
@@ -68,10 +68,10 @@ The above line can be broken down into:
 
 - `repo_name`: is the [setting](#settings) that `cookiecutter` is asking for.
 - `[repository]`: the default value `cookiecutter` will use if nothing is
-  entered. 
+  entered.
 - `a_new_repo`: is the value the author entered for this example.
 
-Notice how some values in this example have no author input. For example: 
+Notice how some values in this example have no author input. For example:
 
 ```console
 crate_namespace_prefix [mc-]: 
