@@ -97,7 +97,7 @@ for valid categories. Entered as a space separated list of values.
 ## Installing cookiecutter
 
 To install [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/)
-consider using something like [pipx](https://pypa.github.io/pipx/). 
+consider using something like [pipx](https://pypa.github.io/pipx/).
 
 The advantage to using `pipx` is that `cookiecutter` will be installed in an
 isolated python environment. The `cookiecutter` documented installation,
@@ -123,4 +123,3 @@ Install cookiecutter:
 ```console
 pipx install cookiecutter
 ```
-
