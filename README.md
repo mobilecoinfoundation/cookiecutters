@@ -162,8 +162,8 @@ pipx install cookiecutter
 ```
 
 There is alternate installation instructions provided by the `cookiecutter`
-docs, <https://cookiecutter.readthedocs.io/en/stable/installation.html>. Using
-this method will pull `cookiecutter` dependencies into the system or user python
+docs, <https://cookiecutter.readthedocs.io/en/stable/installation.html>, however
+this results in pulling `cookiecutter` dependencies into the system or user python
 environment.
 
 ## Usage
