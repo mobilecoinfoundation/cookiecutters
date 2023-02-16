@@ -1,14 +1,21 @@
 version: 2
 updates:
 - package-ecosystem: github-actions
-  directory: '/{{ cookiecutter.repo_name }}/.github'
+  directory: '/rust-workspace/{{ cookiecutter.repo_name }}/.github'
   schedule:
     interval: daily
   open-pull-requests-limit: 10
   commit-message:
     prefix: "chore(deps)"
 - package-ecosystem: github-actions
-  directory: '/{{ cookiecutter.repo_name }}/.github/workflows'
+  directory: '/rust-workspace/{{ cookiecutter.repo_name }}/.github/workflows'
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  commit-message:
+    prefix: "chore(deps)"
+- package-ecosystem: github-actions
+  directory: '/'
   schedule:
     interval: daily
   open-pull-requests-limit: 10
