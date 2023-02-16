@@ -30,14 +30,14 @@ crate.
 > `cookiecutter`.
 
 Invoking cookiecutter with this repository's URL and this directory,
-`gh:mobilecoinfoundation/cookiecutters --directory rust-crate` will begin
+`gh:mobilecoinfoundation/cookiecutters --directory rust/workspace-crate` will begin
 the process of creating a crate using the template.  
 
 The first line is the `cookiecutter` invocation. The subsequent lines are
 prompts from `cookiecutter`.
 
 ```console
-> cookiecutter gh:mobilecoinfoundation/cookiecutters --directory rust-crate
+> cookiecutter gh:mobilecoinfoundation/cookiecutters --directory rust/workspace-crate
 
 crate_name [mc-crate-name]: mc-some-nice-thing
 crate_namespace_prefix [mc-]: 
