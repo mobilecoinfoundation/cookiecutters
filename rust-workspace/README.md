@@ -42,7 +42,7 @@ The first line is the `cookiecutter` invocation. The subsequent lines are
 prompts from `cookiecutter`.
 
 ```console
-> cookiecutter gh:mobilecoinfoundation/cookiecutters --directory rust-worksapce
+> cookiecutter gh:mobilecoinfoundation/cookiecutters --directory rust-workspace
 
 repo_name [repository]: a_new_repo
 workspace_description [A brief summary of the workspace]: My entered description of `a_new_repo`
@@ -139,7 +139,7 @@ Some things to point out:
 If starting locally one can do:
 
 ```console
-cookiecutter gh:mobilecoinfoundation/cookiecutters --directory rust-worksapce
+cookiecutter gh:mobilecoinfoundation/cookiecutters --directory rust-workspace
 ... prompts
 
 cd <repo_name>
@@ -157,7 +157,7 @@ cookiecutter:
 
 ```console
 git clone https://github.com/mobilecoinfoundation/<repo_name>
-cookiecutter gh:mobilecoinfoundation/cookiecutters --directory rust-worksapce --overwrite-if-exists 
+cookiecutter gh:mobilecoinfoundation/cookiecutters --directory rust-workspace --overwrite-if-exists 
 cd <repo_name>
 git add .
 git commit
@@ -184,7 +184,7 @@ The title to use in the workspace (root) README.md.
 
 ### crate\_name
 
-The name of the initial crate available in the worksapce. This should be the
+The name of the initial crate available in the workspace. This should be the
 full name. It will be used unmodified as the name in the Cargo.toml.
 
 ### crate\_namespace\_prefix
