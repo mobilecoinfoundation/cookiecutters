@@ -10,5 +10,5 @@
 
   // Define glob expressions to use (only valid at root)
   "globs": ["**/*.md"],
-  "ignores": [".github/pull_request_template.md", "target/", "rust-workspace/{{ cookiecutter.repo_name }}/"]
+  "ignores": [".github/pull_request_template.md", "target/", "rust-workspace/{{ cookiecutter.repo_name }}/", "rust-crate/{{ cookiecutter.crate_sub_dir }}/"]
 }
