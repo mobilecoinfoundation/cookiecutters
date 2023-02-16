@@ -1,4 +1,4 @@
-# Rust Crate cookiecutter
+# Rust Workspace Crate cookiecutter
 
 A [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/) for creating a
 rust crate inside of a workspace.
