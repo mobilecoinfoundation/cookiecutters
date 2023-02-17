@@ -1,3 +1,5 @@
+/.github/settings.yml @nick-mobilecoin @jcape
+/.github/CODEOWNERS @nick-mobilecoin @jcape
 /.github @nick-mobilecoin @jcape
 /rust @nick-mobilecoin @jcape
 /LICENSE
