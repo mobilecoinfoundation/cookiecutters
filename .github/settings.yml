@@ -64,7 +64,8 @@ branches:
       required_status_checks:
         strict: false
         contexts: []
-        checks: []
+        checks:
+          - markdown-lint
       enforce_admins: true
       required_pull_request_reviews:
         require_code_owner_reviews: true
