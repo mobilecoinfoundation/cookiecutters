@@ -35,7 +35,7 @@ labels:
     description: Small PRs
   - name: size/M
     color: '#cefb02'
-    description Medium-sized PRs
+    description: Medium-sized PRs
   - name: size/L
     color: '#ffde40'
     description: Large PRs
@@ -76,3 +76,4 @@ branches:
         teams: []
       required_linear_history: true
       required_conversation_resolution: true
+      required_signatures: true
