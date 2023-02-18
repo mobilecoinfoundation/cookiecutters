@@ -56,7 +56,10 @@ jobs:
             ~/.cargo/git/db/
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.toml') }}
           restore-keys: ${{ runner.os }}-cargo-
-      - run: cargo crev trust --level high --no-commit https://github.com/mobilecoinfoundation/crev-proofs
+      - name: Install Crev
+        run: |
+          cargo install cargo-crev || true
+          cargo crev trust --level high --no-commit https://github.com/mobilecoinfoundation/crev-proofs
       - name: Run Cargo Crev
         id: cargo-crev
         run: |
