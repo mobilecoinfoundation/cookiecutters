@@ -108,7 +108,7 @@ jobs:
           set -e
 
           # TODO: When we're ready to make this required
-          # exit $STATUS 
+          # exit $STATUS
           exit 0
         shell: bash
       - uses: mshick/add-pr-comment@v2
@@ -116,7 +116,7 @@ jobs:
           # yamllint disable rule:line-length
           message: |
             #### :x: Unreviewed dependencies found
-            
+
             | Crate | Version | Reviews (N/2) | LoC | Left-Pad Index | Geiger | Flags |
             | ----- | ------- | ------------- | --- | -------------- | ------ | ----- |
             ${{ steps.cargo-crev.outputs.UNREVIEWED_DEPENDENCIES }}
