@@ -47,7 +47,7 @@ jobs:
       - "rustfmt"
       - "markdown-lint"
       - "yamllint"
-    # Override errors here, eventually we'd like to start failing PRs based on this
+    # TODO: once we have enough reviews, make this a required check
     continue-on-error: true
     permissions:
       pull-requests: write
@@ -68,7 +68,9 @@ jobs:
       - name: Install Crev
         run: |
           cargo install cargo-crev || true
-          cargo crev trust --level high --no-commit https://github.com/mobilecoinfoundation/crev-proofs
+          cargo crev trust \
+            --level high \
+            --no-commit https://github.com/mobilecoinfoundation/crev-proofs
       - name: Run Cargo Crev
         id: cargo-crev
         run: |
@@ -77,10 +79,11 @@ jobs:
           echo "UNREVIEWED_DEPENDENCIES<<EOF${MARKER}" >> $GITHUB_OUTPUT
           # GH does not like colors in crev output
           export TERM=xterm-mono
-          # - Get a TSV-formatted table of dependencies without recorded reviews
+          # - Get a TSV-formatted table of dependencies without reviews
           # - Skip any "local" dependencies
           # - Convert the table to GHF markdown
-          # - Sort descending by the "LoC" value (first column preceeds first pipe)
+          # - Sort descending by the "LoC" value (first column preceeds first
+          #   pipe)
 
           cargo crev crate verify \
               --for-id vMr-9g5KzKQLsCpkp1tc8o7AR6a0OptjOICjf7NMyHE \
@@ -93,7 +96,10 @@ jobs:
               --understanding medium \
               --redundancy 2 | \
             grep -v '^local ' | \
-            awk '{printf("| %s | %s | %s | %s | %s | %s | %s |\n", $14, $15, $2, $10, $11, $12, $13)}' | \
+            awk '{
+              printf("| %s | %s | %s | %s | %s | %s | %s |\n",
+                     $14, $15, $2, $10, $11, $12, $13)
+            }' | \
             sort -t\| -n -k5 | \
             tee /dev/stderr >> $GITHUB_OUTPUT
           STATUS=$?
@@ -101,18 +107,20 @@ jobs:
 
           set -e
 
-          # TODO: Once we're ready to start failing PRs for lack of dependency reviews
+          # TODO: When we're ready to make this required
           # exit $STATUS 
           exit 0
         shell: bash
       - uses: mshick/add-pr-comment@v2
         with:
+          # yamllint disable rule:line-length
           message: |
             #### :x: Unreviewed dependencies found
             
             | Crate | Version | Reviews (N/2) | LoC | Left-Pad Index | Geiger | Flags |
             | ----- | ------- | ------------- | --- | -------------- | ------ | ----- |
             ${{ steps.cargo-crev.outputs.UNREVIEWED_DEPENDENCIES }}
+          # yamllint enable rule:line-length
 
   deny:
     runs-on: ubuntu-22.04
@@ -165,7 +173,8 @@ jobs:
           toolchain: ${{ matrix.rust }}
           components: clippy
       - uses: r7kamura/rust-problem-matchers@v1
-      - run: cargo +${{ matrix.rust }} clippy --all --all-features -- -D warnings
+      - run: |
+          cargo +${{ matrix.rust }} clippy --all --all-features -- -D warnings
       # TODO: Fix automatically, or post GH-suggestions comments
 
   build:
@@ -269,6 +278,8 @@ jobs:
           title: "Workflow: ${{ github.workflow }}"
           url: ${{ github.repository_url }}/actions/runs/${{ github.run_id }}
           description: |
-            [@${{ github.pusher }}](${{ github.url }}/${{ github.pusher }}] was the last one to touch ${{ github.repository }}, is all I'm saying...
+            [@${{ github.pusher }}](${{ github.url }}/${{ github.pusher }}]
+            was the last one to touch ${{ github.repository }}, is all I'm
+            saying...
           avatar_url: "https://media0.giphy.com/media/oe33xf3B50fsc/200.gif"
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
