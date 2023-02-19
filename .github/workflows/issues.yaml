@@ -11,11 +11,11 @@ jobs:
   triage:
     runs-on: ubuntu-latest
     steps:
-    - uses: github/issue-labeler@v3.0
-      with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
-        configuration-path: .github/triage-labeler.yaml
-        enable-versioned-regex: 0
+      - uses: github/issue-labeler@v3.0
+        with:
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          configuration-path: .github/triage-labeler.yaml
+          enable-versioned-regex: 0
 
   add-to-project:
     runs-on: ubuntu-latest
