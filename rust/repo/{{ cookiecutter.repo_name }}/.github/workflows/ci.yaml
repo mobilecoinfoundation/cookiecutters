@@ -1,3 +1,4 @@
+---
 name: ci
 
 on:
@@ -33,11 +34,19 @@ jobs:
           globs: "**/*.md"
       # TODO: Fix automatically
 
+  yamllint:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      # TODO: Add problem matcher?
+      - run: yamllint .
+
   crev:
     runs-on: ubuntu-22.04
     needs:
       - "rustfmt"
       - "markdown-lint"
+      - "yamllint"
     # Override errors here, eventually we'd like to start failing PRs based on this
     continue-on-error: true
     permissions:
@@ -110,6 +119,7 @@ jobs:
     needs:
       - "rustfmt"
       - "markdown-lint"
+      - "yamllint"
     strategy:
       matrix:
         checks:
@@ -128,6 +138,7 @@ jobs:
     needs:
       - "rustfmt"
       - "markdown-lint"
+      - "yamllint"
     steps:
       - uses: actions/checkout@v3
       - uses: dtolnay/rust-toolchain@stable
@@ -140,6 +151,7 @@ jobs:
     needs:
       - "rustfmt"
       - "markdown-lint"
+      - "yamllint"
     strategy:
       matrix:
         rust:
@@ -161,6 +173,7 @@ jobs:
     needs:
       - "rustfmt"
       - "markdown-lint"
+      - "yamllint"
     strategy:
       matrix:
         rust:
@@ -180,6 +193,7 @@ jobs:
     needs:
       - "rustfmt"
       - "markdown-lint"
+      - "yamllint"
     strategy:
       matrix:
         rust:
@@ -199,6 +213,7 @@ jobs:
     needs:
       - "rustfmt"
       - "markdown-lint"
+      - "yamllint"
     strategy:
       matrix:
         rust:
@@ -219,6 +234,7 @@ jobs:
     needs:
       - "rustfmt"
       - "markdown-lint"
+      - "yamllint"
     steps:
       - uses: actions/checkout@v3
       - uses: dtolnay/rust-toolchain@stable
