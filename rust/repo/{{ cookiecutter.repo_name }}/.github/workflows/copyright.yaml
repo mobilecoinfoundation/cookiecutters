@@ -3,7 +3,7 @@ name: copyright
 
 on:  # yamllint disable-line rule:truthy
   schedule:
-    - cron: '0 3 1 1 *' # 03:00 AM on January 1
+    - cron: '0 3 1 1 *'  # 03:00 AM on January 1
 
 jobs:
   update-license-year:
