@@ -1,3 +1,4 @@
+---
 name: ci
 
 on:
@@ -31,3 +32,10 @@ jobs:
       - run: ./render-tests.sh ${{ matrix.cookiecutter_directory }}
       - name: Ensure there are no unaccounted for changes
         run: git diff --quiet --ignore-submodules HEAD
+
+  yamllint:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      # TODO: Add problem matcher?
+      - run: yamllint .
