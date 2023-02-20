@@ -1,7 +1,7 @@
 [package]
 name = "{{ cookiecutter.crate_name }}"
 version = "{{ cookiecutter.version }}"
-authors = ["MobileCoin"]
+authors = { workspace = true }
 # See https://crates.io/category_slugs for valid categories
 categories = ["{{ cookiecutter.crate_categories.split()|join('", "') }}"]
 description = "{{ cookiecutter.crate_description }}"
@@ -14,7 +14,7 @@ license = { workspace = true }
 license = "{{ cookiecutter.license }}"
 {%- endif -%}
 readme = "README.md"
-repository = "https://github.com/mobilecoinfoundation/{{ cookiecutter.repo_name }}"
+repository = { workspace = true }
 rust-version = { workspace = true}
 
 [dependencies]

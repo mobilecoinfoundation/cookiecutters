@@ -11,8 +11,10 @@ resolver = "2"
 lto = "thin"
 
 [workspace.package]
+authors = ["MobileCoin"]
 edition = "2021"
 license = "{{ cookiecutter.license }}"
+repository = "https://github.com/mobilecoinfoundation/{{ cookiecutter.repo_name }}"
 rust-version = "1.67.1"
 
 [workspace.metadata.release]
