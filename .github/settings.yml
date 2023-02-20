@@ -28,6 +28,9 @@ labels:
   - name: python
     color: '#4584b6'
     description: Changes to python code or dependencies
+  - name: go
+    color: '#29beb0'
+    description: Changes to golang code or dependencies
 
   - name: size/XS
     color: '#00ed01'
