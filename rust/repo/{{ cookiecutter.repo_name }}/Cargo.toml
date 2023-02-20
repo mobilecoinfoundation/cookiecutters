@@ -1,3 +1,4 @@
+{%- if cookiecutter.type == "workspace" -%}
 [workspace]
 members = [
     "{{ cookiecutter.crate_sub_dir }}",
@@ -7,17 +8,37 @@ members = [
 # We shouldn't have to per https://doc.rust-lang.org/edition-guide/rust-2021/default-cargo-resolver.html, but that does not appear to be the case
 resolver = "2"
 
-[profile.release]
-lto = "thin"
-
 [workspace.package]
+{%- else -%}
+[package]
+name = "{{ cookiecutter.crate_name }}"
+version = "{{ cookiecutter.version }}"
+{%- endif %}
 authors = ["MobileCoin"]
+{%- if cookiecutter.type == "single-crate" %}
+# See https://crates.io/category_slugs for valid categories
+categories = ["{{ cookiecutter.crate_categories.split()|join('", "') }}"]
+description = "{{ cookiecutter.crate_description }}"
+{%- endif %}
 edition = "2021"
+{%- if cookiecutter.type == "single-crate" %}
+# See https://crates.io/keywords for the common keywords
+keywords = ["{{ cookiecutter.crate_keywords.split()|join('", "') }}"]
+{%- endif %}
 license = "{{ cookiecutter.license }}"
+{%- if cookiecutter.type == "single-crate" %}
+readme = "README.md"
+{%- endif %}
 repository = "https://github.com/mobilecoinfoundation/{{ cookiecutter.repo_name }}"
 rust-version = "1.67.1"
 
+[profile.release]
+lto = "thin"
+{% if cookiecutter.type == "workspace" %}
 [workspace.metadata.release]
+{%- else %}
+[metadata.release]
+{%- endif %}
 shared-version = true
 dev-version-ext = "beta.0"
 consolidate-commits = true
@@ -31,3 +52,6 @@ tag-name = "v{{ "{{version}}" }}"
 pre-release-replacements = [
     {file="README.md", search="{{ cookiecutter.crate_namespace_prefix }}[a-z-]+/[0-9.]+", replace="{{ "{{crate_name}}/{{version}}" }}"},
 ]
+{% if cookiecutter.type == "single-crate" %}
+[dependencies]
+{%- endif %}

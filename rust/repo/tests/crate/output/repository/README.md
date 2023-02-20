@@ -1,19 +1,27 @@
 <!-- markdownlint-disable -->
-# MobileCoin: A brief summary of the workspace
+# MobileCoin: A brief summary of the crate
 <!-- markdownlint-enable -->
 
 [![Project Chat][chat-image]][chat-link]<!--
 -->![License][license-image]<!--
+-->![Target][target-image]<!--
+-->[![Crates.io][crate-image]][crate-link]<!--
+-->[![Docs Status][docs-image]][docs-link]<!--
 -->[![Dependency Status][deps-image]][deps-link]<!--
 -->[![CodeCov Status][codecov-image]][codecov-link]<!--
 -->[![GitHub Workflow Status][gha-image]][gha-link]<!--
 -->[![Contributor Covenant][conduct-image]][conduct-link]
 
-A brief summary of the workspace
+A brief summary of the crate
 
 [chat-image]: https://img.shields.io/discord/844353360348971068?style=flat-square
 [chat-link]: https://mobilecoin.chat
 [license-image]: https://img.shields.io/crates/l/mc-crate-name?style=flat-square
+[target-image]: https://img.shields.io/badge/target-any-brightgreen?style=flat-square
+[crate-image]: https://img.shields.io/crates/v/mc-crate-name.svg?style=flat-square
+[crate-link]: https://crates.io/crates/mc-crate-name
+[docs-image]: https://img.shields.io/docsrs/mc-crate-name?style=flat-square
+[docs-link]: https://docs.rs/crate/mc-crate-name
 [deps-image]: https://deps.rs/repo/github/mobilecoinfoundation/repository/status.svg?style=flat-square
 [deps-link]: https://deps.rs/repo/github/mobilecoinfoundation/repository
 [codecov-image]: https://img.shields.io/codecov/c/github/mobilecoinfoundation/repository/develop?style=flat-square
