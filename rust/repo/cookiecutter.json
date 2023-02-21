@@ -15,6 +15,11 @@
     "AGPL-3.0-only",
     "GPL-3.0-only"
   ],
+  "arch": [
+    "any",
+    "x86_64",
+    "sgx"
+  ],
   "workspace_description": "A brief summary of the workspace",
   "workspace_readme_title": "MobileCoin: {{ cookiecutter.workspace_description }}",
   "crate_name": "mc-crate-name",

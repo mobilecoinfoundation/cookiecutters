@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
 # MobileCoin: A brief summary of the workspace
-<!-- markdownlint-enable -->
 
 [![Project Chat][chat-image]][chat-link]<!--
 -->![License][license-image]<!--

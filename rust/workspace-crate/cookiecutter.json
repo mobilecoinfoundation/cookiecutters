@@ -1,4 +1,16 @@
 {
+  "_extensions": ["local_extensions.GithubRepoNameExtension", "local_extensions.GithubUsernameExtension"],
+  "arch": [
+    "any",
+    "x86_64",
+    "sgx"
+  ],
+  "license": [
+    "Same as Workspace",
+    "Apache-2.0",
+    "AGPL-3.0-only",
+    "GPL-3.0-only"
+  ],
   "crate_name": "mc-crate-name",
   "crate_namespace_prefix": "mc-",
   "crate_description": "A brief summary of the crate",
@@ -7,13 +19,6 @@
   "crate_sub_dir": "{{ cookiecutter.crate_name.lower().partition(cookiecutter.crate_namespace_prefix)[-1].replace('-','/') }}",
   "repo_name": "{{ github_repo_name() }}",
   "crate_keywords": "blockchain serde",
-  "crate_categories": "cryptography no-std",
-  "license": [
-    "Same as Workspace",
-    "Apache-2.0",
-    "AGPL-3.0-only",
-    "GPL-3.0-only"
-  ],
-  "_extensions": ["local_extensions.GithubRepoNameExtension", "local_extensions.GithubUsernameExtension"]
+  "crate_categories": "cryptography no-std"
 }
 

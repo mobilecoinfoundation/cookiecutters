@@ -1,15 +1,13 @@
-<!-- markdownlint-disable -->
-{%- if cookiecutter.type == "workspace" %}
+{%- if cookiecutter.type == "workspace" -%}
 # {{ cookiecutter.workspace_readme_title }}
-{%- else %}
+{%- else -%}
 # {{ cookiecutter.crate_readme_title }}
 {%- endif %}
-<!-- markdownlint-enable -->
 
 [![Project Chat][chat-image]][chat-link]<!--
 -->![License][license-image]<!--
 {%- if cookiecutter.type == "single-crate" %}
--->![Target][target-image]<!--
+-->![Architecture: {{ cookiecutter.arch }}][arch-image]<!--
 -->[![Crates.io][crate-image]][crate-link]<!--
 -->[![Docs Status][docs-image]][docs-link]<!--
 {%- endif %}
@@ -27,7 +25,13 @@
 [chat-link]: https://mobilecoin.chat
 [license-image]: https://img.shields.io/crates/l/{{ cookiecutter.crate_name }}?style=flat-square
 {%- if cookiecutter.type == "single-crate" %}
-[target-image]: https://img.shields.io/badge/target-any-brightgreen?style=flat-square
+{%- if cookiecutter.arch == "sgx" %}
+[arch-image]: https://img.shields.io/badge/arch-sgx-red?style=flat-square
+{%- elif cookiecutter.arch == "any" %}
+[arch-image]: https://img.shields.io/badge/arch-any-brightgreen?style=flat-square
+{%- else %}
+[arch-image]: https://img.shields.io/badge/arch-{{ cookiecutter.arch.replace('_', '__') }}-blue?style=flat-square
+{%- endif %}
 [crate-image]: https://img.shields.io/crates/v/{{ cookiecutter.crate_name }}.svg?style=flat-square
 [crate-link]: https://crates.io/crates/{{ cookiecutter.crate_name }}
 [docs-image]: https://img.shields.io/docsrs/{{ cookiecutter.crate_name }}?style=flat-square
