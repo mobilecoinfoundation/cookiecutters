@@ -1,7 +1,7 @@
 ---
 name: issues
 
-on:  # yamllint disable-line rule:truthy
+"on":
   issues:
     types:
       - opened

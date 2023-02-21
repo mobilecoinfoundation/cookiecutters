@@ -1,7 +1,7 @@
 ---
 name: ci
 
-on:  # yamllint disable-line rule:truthy
+"on":
   push:
     branches:
       - 'main'
@@ -38,4 +38,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       # TODO: Add problem matcher?
-      - run: yamllint .
+      - run: yamllint -s .

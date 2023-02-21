@@ -1,7 +1,7 @@
 ---
 name: ci
 
-on:  # yamllint disable-line rule:truthy
+"on":
   push:
     branches:
       - 'main'
@@ -39,7 +39,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
-      - run: yamllint .
+      - run: yamllint -s .
 
   crev:
     runs-on: ubuntu-22.04
