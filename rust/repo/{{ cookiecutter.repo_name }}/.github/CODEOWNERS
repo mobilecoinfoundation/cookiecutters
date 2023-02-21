@@ -1,6 +1,6 @@
 # These lines impact repository security
-/.github/CODEOWNERS        @nick-mobilecoin @jcape
-/.github/settings.yml      @nick-mobilecoin @jcape
+/.github/CODEOWNERS        {{ cookiecutter.owners }}
+/.github/settings.yml      {{ cookiecutter.owners }}
 
 # These lines prevent reviews of trivial changes blocking on particular users
 /.gitattributes

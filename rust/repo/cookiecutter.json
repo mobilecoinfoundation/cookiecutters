@@ -1,5 +1,6 @@
 {
   "repo_name": "repository",
+  "owners": "{{ cookiecutter.github_username }} @jcape",
   "workspace_description": "A brief summary of the workspace",
   "workspace_readme_title": "MobileCoin: {{ cookiecutter.workspace_description }}",
   "crate_name": "mc-crate-name",
