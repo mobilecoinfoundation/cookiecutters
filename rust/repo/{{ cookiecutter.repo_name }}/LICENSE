@@ -806,7 +806,7 @@ You should also get your employer (if you work as a programmer) or school,
 if any, to sign a "copyright disclaimer" for the program, if necessary. For
 more information on this, and how to apply and follow the GNU AGPL, see <http://www.gnu.org/licenses/>.
 
-{%- elif cookiecutter.license == "GPL-3.0" -%}
+{%- elif cookiecutter.license == "GPL-3.0-only" -%}
 GNU GENERAL PUBLIC LICENSE
 Version 3, 29 June 2007
 
