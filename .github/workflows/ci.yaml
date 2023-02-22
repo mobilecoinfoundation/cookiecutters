@@ -15,3 +15,19 @@ jobs:
       - uses: DavidAnson/markdownlint-cli2-action@v9
         with:
           globs: "**/*.md"
+
+  rendering:
+    runs-on: ubuntu-22.04
+    strategy:
+      matrix:
+        cookiecutter_directory:
+          - rust/repo
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - run: pip install cookiecutter
+      - run: ./render-tests.sh ${{ matrix.cookiecutter_directory }}
+      - name: Ensure there are no unaccounted for changes
+        run: git diff --quiet --ignore-submodules HEAD

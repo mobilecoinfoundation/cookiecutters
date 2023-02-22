@@ -1,5 +1,11 @@
 {
+  "_copy_without_render": [
+      ".github/workflows/*"
+  ],
+  "_extensions": ["local_extensions.GithubUsernameExtension"],
   "repo_name": "repository",
+  "github_username": "{{ github_username() }}",
+  "owners": "{{ cookiecutter.github_username }} @jcape",
   "workspace_description": "A brief summary of the workspace",
   "workspace_readme_title": "MobileCoin: {{ cookiecutter.workspace_description }}",
   "crate_name": "mc-crate-name",
@@ -9,9 +15,5 @@
   "crate_sub_dir": "{{ cookiecutter.crate_name.lower().partition(cookiecutter.crate_namespace_prefix)[-1].replace('-','/') }}",
   "version": "0.1.0",
   "crate_keywords": "blockchain serde",
-  "crate_categories": "cryptography no-std",
-  "_copy_without_render": [
-      ".github/**"
-  ]
+  "crate_categories": "cryptography no-std"
 }
-
