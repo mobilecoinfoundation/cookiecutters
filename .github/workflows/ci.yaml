@@ -20,21 +20,13 @@ jobs:
     runs-on: ubuntu-22.04
     strategy:
       matrix:
-        test:
-          - rust/repo/tests/basic
+        cookiecutter_directory:
+          - rust/repo
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
         with:
           python-version: '3.10'
       - run: pip install cookiecutter
-      - run: |
-        rm -rf ${{ matrix.test }}/output
-        cookiecutter \
-          --no-input \
-          --config-file ${{ matrix.test }}/cookiecutter.yaml \
-          --output-dir ${{ matrix.test }}/output \
-          --directory rust/repo \
-          --overwrite-if-exists \
-          .
+      - run: render-tests.sh ${{ matrix.cookiecutter_directory }}
       - run: git diff --quiet --ignore-submodules HEAD
