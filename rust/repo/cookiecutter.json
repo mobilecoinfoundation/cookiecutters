@@ -13,5 +13,6 @@
   "crate_categories": "cryptography no-std",
   "_copy_without_render": [
       ".github/workspace/**"
-  ]
+  ],
+  "_extensions": ["local_extensions.GithubUsernameExtension"]
 }

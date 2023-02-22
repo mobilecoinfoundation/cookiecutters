@@ -8,6 +8,6 @@
   "repo_name": "{{ github_repo_name() }}",
   "crate_keywords": "blockchain serde",
   "crate_categories": "cryptography no-std",
-  "_extensions": ["local_extensions.GithubRepoNameExtension"]
+  "_extensions": ["local_extensions.GithubRepoNameExtension", "local_extensions.GithubUsernameExtension"]
 }
 
