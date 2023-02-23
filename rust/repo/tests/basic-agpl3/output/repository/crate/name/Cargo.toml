@@ -1,0 +1,16 @@
+[package]
+name = "mc-crate-name"
+version = "0.1.0"
+authors = { workspace = true }
+# See https://crates.io/category_slugs for valid categories
+categories = ["cryptography", "no-std"]
+description = "A brief summary of the crate"
+edition = { workspace = true }
+# See https://crates.io/keywords for the common keywords
+keywords = ["blockchain", "serde"]
+license = { workspace = true }
+readme = "README.md"
+repository = { workspace = true }
+rust-version = { workspace = true }
+
+[dependencies]
