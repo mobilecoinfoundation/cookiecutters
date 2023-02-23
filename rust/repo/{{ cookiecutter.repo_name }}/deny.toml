@@ -29,8 +29,13 @@ allow = [
 {%- endif %}
 ]
 deny = []
+{%- if cookiecutter.license in ("GPL-3.0-only", "AGPL-3.0-only") %}
+copyleft = "allow"
+allow-osi-fsf-free = "both"
+{%- else %}
 copyleft = "deny"
 allow-osi-fsf-free = "neither"
+{%- endif %}
 default = "deny"
 confidence-threshold = 0.8
 exceptions = []

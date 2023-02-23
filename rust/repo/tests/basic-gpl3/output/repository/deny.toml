@@ -23,8 +23,8 @@ allow = [
     "GPL-3.0-or-later",
 ]
 deny = []
-copyleft = "deny"
-allow-osi-fsf-free = "neither"
+copyleft = "allow"
+allow-osi-fsf-free = "both"
 default = "deny"
 confidence-threshold = 0.8
 exceptions = []
