@@ -1,0 +1,16 @@
+[package]
+name = "mc-crate-name"
+version = "0.1.0"
+authors = ["MobileCoin"]
+# See https://crates.io/category_slugs for valid categories
+categories = ["cryptography", "no-std"]
+description = "A brief summary of the crate"
+edition = "2021"
+# See https://crates.io/keywords for the common keywords
+keywords = ["blockchain", "serde"]
+license = "Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/mobilecoinfoundation/repository"
+rust-version = "1.62.1"
+
+[dependencies]
