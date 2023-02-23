@@ -22,6 +22,8 @@ allow = [
 {%- if cookiecutter.license in ("GPL-3.0-only", "AGPL-3.0-only") %}
     "GPL-3.0-only",
     "GPL-3.0-or-later",
+    "LGPL-3.0-only",
+    "LGPL-3.0-or-later",
 {%- endif -%}
 {%- if cookiecutter.license == "AGPL-3.0-only" %}
     "AGPL-3.0-only",
