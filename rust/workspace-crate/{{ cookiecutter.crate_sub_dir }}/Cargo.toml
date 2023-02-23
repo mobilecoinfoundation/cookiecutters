@@ -8,11 +8,11 @@ description = "{{ cookiecutter.crate_description }}"
 edition = { workspace = true }
 # See https://crates.io/keywords for the common keywords
 keywords = ["{{ cookiecutter.crate_keywords.split()|join('", "') }}"]
-{%- if cookiecutter.license == "Same as Workspace" -%}
+{%- if cookiecutter.license == "Same as Workspace" %}
 license = { workspace = true }
-{%- else -%}
+{%- else %}
 license = "{{ cookiecutter.license }}"
-{%- endif -%}
+{%- endif %}
 readme = "README.md"
 repository = { workspace = true }
 rust-version = { workspace = true}
