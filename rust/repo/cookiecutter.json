@@ -15,5 +15,10 @@
   "crate_sub_dir": "{{ cookiecutter.crate_name.lower().partition(cookiecutter.crate_namespace_prefix)[-1].replace('-','/') }}",
   "version": "0.1.0",
   "crate_keywords": "blockchain serde",
-  "crate_categories": "cryptography no-std"
+  "crate_categories": "cryptography no-std",
+  "license": [
+    "Apache-2.0",
+    "AGPL-3.0-only",
+    "GPL-3.0-only"
+  ]
 }

@@ -1,0 +1,12 @@
+---
+
+default_context:
+  repo_name: "repository"
+  github_username: "@testuser"
+  workspace_description: "A brief summary of the workspace"
+  crate_name: "mc-crate-name"
+  crate_namespace_prefix: "mc-"
+  crate_description: "A brief summary of the crate"
+  version: "0.1.0"
+  crate_keywords: "blockchain serde"
+  crate_categories: "cryptography no-std"

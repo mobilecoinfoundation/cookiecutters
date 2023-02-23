@@ -23,6 +23,7 @@ jobs:
       matrix:
         cookiecutter_directory:
           - rust/repo
+          - rust/workspace-crate
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
