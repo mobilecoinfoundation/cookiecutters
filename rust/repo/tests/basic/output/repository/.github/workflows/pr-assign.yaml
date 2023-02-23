@@ -1,6 +1,7 @@
+---
 name: pr-assign
 
-on:
+"on":
   pull_request:
     types: [opened, ready_for_review]
 

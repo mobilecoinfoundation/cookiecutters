@@ -1,6 +1,7 @@
+---
 name: pr
 
-on:
+"on":
   pull_request:
 
 jobs:
@@ -39,7 +40,7 @@ jobs:
       contents: read
       pull-requests: write
     steps:
-    - uses: actions/labeler@v4
-      with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
-        configuration-path: ".github/labeler.yaml"
+      - uses: actions/labeler@v4
+        with:
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          configuration-path: ".github/labeler.yaml"
