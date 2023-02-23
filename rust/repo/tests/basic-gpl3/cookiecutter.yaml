@@ -11,3 +11,4 @@ default_context:
   version: "0.1.0"
   crate_keywords: "blockchain serde"
   crate_categories: "cryptography no-std"
+  license: "GPL-3.0-only"
