@@ -1,23 +1,22 @@
-[workspace]
-members = [
-    "crate/name",
-]
-
-# We need to explicitly specify resolver 2.
-# We shouldn't have to per https://doc.rust-lang.org/edition-guide/rust-2021/default-cargo-resolver.html, but that does not appear to be the case
-resolver = "2"
-
-[workspace.package]
+[package]
+name = "mc-crate-name"
+version = "0.1.0"
 authors = ["MobileCoin"]
+# See https://crates.io/category_slugs for valid categories
+categories = ["cryptography", "no-std"]
+description = "A brief summary of the crate"
 edition = "2021"
+# See https://crates.io/keywords for the common keywords
+keywords = ["blockchain", "serde"]
 license = "Apache-2.0"
+readme = "README.md"
 repository = "https://github.com/mobilecoinfoundation/repository"
 rust-version = "1.67.1"
 
 [profile.release]
 lto = "thin"
 
-[workspace.metadata.release]
+[metadata.release]
 shared-version = true
 dev-version-ext = "beta.0"
 consolidate-commits = true
@@ -31,3 +30,5 @@ tag-name = "v{{version}}"
 pre-release-replacements = [
     {file="README.md", search="mc-[a-z-]+/[0-9.]+", replace="{{crate_name}}/{{version}}"},
 ]
+
+[dependencies]

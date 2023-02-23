@@ -6,6 +6,15 @@
   "repo_name": "repository",
   "github_username": "{{ github_username() }}",
   "owners": "{{ cookiecutter.github_username }} @jcape",
+  "type": [
+    "workspace",
+    "single-crate"
+  ],
+  "license": [
+    "Apache-2.0",
+    "AGPL-3.0-only",
+    "GPL-3.0-only"
+  ],
   "workspace_description": "A brief summary of the workspace",
   "workspace_readme_title": "MobileCoin: {{ cookiecutter.workspace_description }}",
   "crate_name": "mc-crate-name",
@@ -15,10 +24,5 @@
   "crate_sub_dir": "{{ cookiecutter.crate_name.lower().partition(cookiecutter.crate_namespace_prefix)[-1].replace('-','/') }}",
   "version": "0.1.0",
   "crate_keywords": "blockchain serde",
-  "crate_categories": "cryptography no-std",
-  "license": [
-    "Apache-2.0",
-    "AGPL-3.0-only",
-    "GPL-3.0-only"
-  ]
+  "crate_categories": "cryptography no-std"
 }
