@@ -2,9 +2,8 @@
   "_copy_without_render": [
       ".github/workflows/*"
   ],
-  "_extensions": ["local_extensions.GithubUsernameExtension"],
   "repo_name": "repository",
-  "github_username": "{{ github_username() }}",
+  "github_username": "@your_github_username",
   "owners": "{{ cookiecutter.github_username }} @jcape",
   "type": [
     "workspace",
