@@ -1,6 +1,6 @@
 from jinja2.ext import Extension
 import subprocess
-
+import json
 
 class GithubUsernameExtension(Extension):
     """Jinja2 Extension to get the current Github username via `gh`.

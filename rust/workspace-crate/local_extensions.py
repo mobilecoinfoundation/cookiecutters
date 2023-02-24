@@ -1,6 +1,6 @@
 from jinja2.ext import Extension
 import subprocess
-
+import json
 
 class GithubRepoNameExtension(Extension):
     """Jinja2 Extension to get the Github repo name of the current git repo.
