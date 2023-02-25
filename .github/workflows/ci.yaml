@@ -37,7 +37,9 @@ jobs:
           python-version: '3.10'
       - uses: abatilo/actions-poetry@v2
       - run: poetry install
-      - run: poetry run pytest
+      # need "-vv" to get the nicer output from
+      # https://docs.python.org/3/library/difflib.html#difflib.unified_diff
+      - run: poetry run pytest -vv
 
   rendering:
     runs-on: ubuntu-22.04
