@@ -13,3 +13,9 @@ updates:
       interval: daily
     commit-message:
       prefix: "chore(deps)"
+  - package-ecosystem: pip
+    directory: '/'
+    schedule:
+      interval: daily
+    commit-message:
+      prefix: "chore(deps)"
