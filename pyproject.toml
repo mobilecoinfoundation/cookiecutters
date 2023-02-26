@@ -13,6 +13,8 @@ cookiecutter = "^2.1.1"
 pytest = "^7.2.1"
 black = "^23.1.0"
 seedir = "^0.4.2"
+PyYAML = "^6.0"
+toml = "^0.10.2"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
