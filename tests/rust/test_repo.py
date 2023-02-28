@@ -22,6 +22,6 @@ def test_default_repo_render(template_root, tmp_path):
         output_dir=tmp_path,
     )
 
-    dirs = dircmp(tmp_path, template_root / "tests/rust/repo/expecteds/default")
+    dirs = dircmp(tmp_path, template_root / "tests/rust/repo/expected/default")
 
     assert dirs_the_same(dirs)
