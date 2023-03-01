@@ -1,9 +1,6 @@
 {%- if cookiecutter.type == "workspace" -%}
-
 # {{ cookiecutter.workspace_readme_title }}
-
 {%- else -%}
-
 # {{ cookiecutter.crate_readme_title }}
 
 {%- endif %}
