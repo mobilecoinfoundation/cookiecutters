@@ -32,7 +32,9 @@
 {%- if cookiecutter.arch == "sgx" %}
 [arch-image]: https://img.shields.io/badge/arch-sgx-red?style=flat-square
 {%- elif cookiecutter.arch == "any" %}
+[arch-image]: https://img.shields.io/badge/arch-any-brightgreen?style=flat-square
 {%- else %}
+[arch-image]: https://img.shields.io/badge/arch-{{ cookiecutter.arch.replace('_', '__') }}-blue?style=flat-square
 {%- endif %}
 [crate-image]: https://img.shields.io/crates/v/{{ cookiecutter.crate_name }}.svg?style=flat-square
 [crate-link]: https://crates.io/crates/{{ cookiecutter.crate_name }}
