@@ -2,7 +2,6 @@
 # {{ cookiecutter.workspace_readme_title }}
 {%- else -%}
 # {{ cookiecutter.crate_readme_title }}
-
 {%- endif %}
 
 [![Project Chat][chat-image]][chat-link]<!--

@@ -24,7 +24,7 @@ A brief summary of the crate
 [deps-link]: https://deps.rs/repo/github/mobilecoinfoundation/repository
 [codecov-image]: https://img.shields.io/codecov/c/github/mobilecoinfoundation/repository/develop?style=flat-square
 [codecov-link]: https://codecov.io/gh/mobilecoinfoundation/repository
-[gha-image]: https://img.shields.io/github/workflow/status/mobilecoinfoundation/repository/ci.yaml?branch=main&style=flat-square
+[gha-image]: https://img.shields.io/github/actions/workflow/status/mobilecoinfoundation/repository/ci.yaml?branch=main&style=flat-square
 [gha-link]: https://github.com/mobilecoinfoundation/repository/actions/workflows/ci.yaml?query=branch%3Amain
 [conduct-link]: CODE_OF_CONDUCT.md
 [conduct-image]: https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg?style=flat-square
