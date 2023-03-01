@@ -1,7 +1,11 @@
 {%- if cookiecutter.type == "workspace" -%}
+
 # {{ cookiecutter.workspace_readme_title }}
+
 {%- else -%}
+
 # {{ cookiecutter.crate_readme_title }}
+
 {%- endif %}
 
 [![Project Chat][chat-image]][chat-link]<!--
@@ -28,9 +32,7 @@
 {%- if cookiecutter.arch == "sgx" %}
 [arch-image]: https://img.shields.io/badge/arch-sgx-red?style=flat-square
 {%- elif cookiecutter.arch == "any" %}
-[arch-image]: https://img.shields.io/badge/arch-any-brightgreen?style=flat-square
 {%- else %}
-[arch-image]: https://img.shields.io/badge/arch-{{ cookiecutter.arch.replace('_', '__') }}-blue?style=flat-square
 {%- endif %}
 [crate-image]: https://img.shields.io/crates/v/{{ cookiecutter.crate_name }}.svg?style=flat-square
 [crate-link]: https://crates.io/crates/{{ cookiecutter.crate_name }}
@@ -41,7 +43,7 @@
 [deps-link]: https://deps.rs/repo/github/mobilecoinfoundation/{{ cookiecutter.repo_name }}
 [codecov-image]: https://img.shields.io/codecov/c/github/mobilecoinfoundation/{{ cookiecutter.repo_name }}/develop?style=flat-square
 [codecov-link]: https://codecov.io/gh/mobilecoinfoundation/{{ cookiecutter.repo_name }}
-[gha-image]: https://img.shields.io/github/workflow/status/mobilecoinfoundation/{{ cookiecutter.repo_name }}/ci.yaml?branch=main&style=flat-square
+[gha-image]: https://img.shields.io/github/actions/workflow/status/mobilecoinfoundation/{{ cookiecutter.repo_name }}/ci.yaml?branch=main&style=flat-square
 [gha-link]: https://github.com/mobilecoinfoundation/{{ cookiecutter.repo_name }}/actions/workflows/ci.yaml?query=branch%3Amain
 [conduct-link]: CODE_OF_CONDUCT.md
 [conduct-image]: https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg?style=flat-square
