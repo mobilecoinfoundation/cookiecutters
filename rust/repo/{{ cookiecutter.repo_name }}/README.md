@@ -41,7 +41,7 @@
 [deps-link]: https://deps.rs/repo/github/mobilecoinfoundation/{{ cookiecutter.repo_name }}
 [codecov-image]: https://img.shields.io/codecov/c/github/mobilecoinfoundation/{{ cookiecutter.repo_name }}/develop?style=flat-square
 [codecov-link]: https://codecov.io/gh/mobilecoinfoundation/{{ cookiecutter.repo_name }}
-[gha-image]: https://img.shields.io/github/workflow/status/mobilecoinfoundation/{{ cookiecutter.repo_name }}/ci.yaml?branch=main&style=flat-square
+[gha-image]: https://img.shields.io/github/actions/workflow/status/mobilecoinfoundation/{{ cookiecutter.repo_name }}/ci.yaml?branch=main&style=flat-square
 [gha-link]: https://github.com/mobilecoinfoundation/{{ cookiecutter.repo_name }}/actions/workflows/ci.yaml?query=branch%3Amain
 [conduct-link]: CODE_OF_CONDUCT.md
 [conduct-image]: https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg?style=flat-square
