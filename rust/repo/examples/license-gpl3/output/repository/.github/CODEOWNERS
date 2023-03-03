@@ -1,17 +1,1 @@
-# These lines impact repository security
-/.github/CODEOWNERS        @testuser @jcape
-/.github/settings.yml      @testuser @jcape
-
-# These lines prevent reviews of trivial changes blocking on particular users
-/.gitattributes
-/.gitconfig
-/.gitignore
-/.markdownlint-cli2.jsonrc
-/CHANGELOG.md
-/Cargo.toml
-/Cargo.lock
-/LICENSE
-/README.md
-/deny.toml
-/rust-toolchain.toml
-/rustfmt.toml
+../../../../default/output/repository/.github/CODEOWNERS

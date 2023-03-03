@@ -1,17 +1,1 @@
----
-rust:
-  - '**.rs'
-  - '**/Cargo.lock'
-  - '**/Cargo.toml'
-
-github_actions:
-  - '.github/workflows/**'
-  - '.github/labeler.yaml'
-  - '.github/triage-labeler.yaml'
-  - '.github/auto_assign.yaml'
-
-python:
-  - '**.py'
-  - '**/poetry.lock'
-  - '**/pyproject.toml'
-  - '**/requirements.txt'
+../../../../default/output/repository/.github/labeler.yaml
