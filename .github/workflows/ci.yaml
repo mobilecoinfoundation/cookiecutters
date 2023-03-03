@@ -21,7 +21,7 @@ jobs:
         with:
           python-version: '3.10'
       - run: pip install cookiecutter
-      - run: ./render-tests.sh ${{ matrix.cookiecutter_directory }}
+      - run: ./generate-examples.sh ${{ matrix.cookiecutter_directory }}
       - name: Ensure there are no unaccounted for changes
         run: git diff --quiet --ignore-submodules HEAD
 
