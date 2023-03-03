@@ -8,15 +8,6 @@ name: ci
   pull_request:
 
 jobs:
-  markdown-lint:
-    runs-on: ubuntu-22.04
-    steps:
-      - uses: actions/checkout@v3
-      - uses: xt0rted/markdownlint-problem-matcher@v2
-      - uses: DavidAnson/markdownlint-cli2-action@v9
-        with:
-          globs: "**/*.md"
-
   rendering:
     runs-on: ubuntu-22.04
     strategy:
@@ -34,9 +25,41 @@ jobs:
       - name: Ensure there are no unaccounted for changes
         run: git diff --quiet --ignore-submodules HEAD
 
-  yamllint:
-    runs-on: ubuntu-22.04
+  lint:
+    runs-on: ubuntu-latest
+    needs:
+      - rendering
     steps:
       - uses: actions/checkout@v3
-      # TODO: Add problem matcher?
+      - uses: xt0rted/markdownlint-problem-matcher@v2
+      - uses: DavidAnson/markdownlint-cli2-action@v9
+        with:
+          globs: "**/*.md"
+      # FIXME: Add yamllint problem matcher
       - run: yamllint -s .
+
+  notify:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && failure()
+    needs:
+      - lint
+      - rendering
+    steps:
+      - name: Notify Discord on failure
+        uses: sarisia/actions-status-discord@v1
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          username: "Github Actions"
+          status: Failure
+          color: 0xff0000
+          nodetail: true
+          # yamllint disable rule:line-length
+          title: "${{ github.repository }} ${{ github.workflow }} has failed on ${{ github.event_name }} to ${{ github.ref_name }}"
+          url: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          description: >
+            [`@${{ github.actor }}`](${{ github.server_url }}/${{ github.actor }})
+            was the last one to touch
+            [that repository](${{ github.server_url }}/${{ github.repository }}),
+            is all I'm saying.
+          avatar_url: "https://media0.giphy.com/media/oe33xf3B50fsc/200.gif"
+          # yamllint enable rule:line-length

@@ -56,7 +56,11 @@ labels:
     description: PRs that should get broken down
 
 collaborator:
+  - username: meowblecoinbot
+    permission: triage
   - username: nick-mobilecoin
+    permission: maintain
+  - username: jcape
     permission: maintain
 
 teams:
@@ -67,20 +71,15 @@ branches:
   - name: main
     # https://docs.github.com/en/rest/branches/branch-protection?apiVersion=2022-11-28
     protection:
-      required_status_checks:
-        strict: false
-        contexts: []
-        checks:
-          - markdown-lint
-      enforce_admins: true
       required_pull_request_reviews:
         require_code_owner_reviews: true
         required_approving_review_count: 1
         require_last_push_approval: true
-      restrictions:
-        apps: []
-        users: []
-        teams: []
-      required_linear_history: true
       required_conversation_resolution: true
-      required_signatures: true
+      required_status_checks:
+        strict: false
+        contexts:
+          - lint
+      enforce_admins: true
+      required_linear_history: true
+      restrictions: null

@@ -4,9 +4,6 @@ rust:
   - '**/Cargo.lock'
   - '**/Cargo.toml'
 
-dependencies:
-  - '**/Cargo.lock'
-
 github_actions:
   - '.github/workflows/**'
   - '.github/labeler.yaml'
