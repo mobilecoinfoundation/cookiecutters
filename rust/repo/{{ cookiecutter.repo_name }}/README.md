@@ -22,7 +22,7 @@
 {%- endif %}
 
 [chat-image]: https://img.shields.io/discord/844353360348971068?style=flat-square
-[chat-link]: https://mobilecoin.chat
+[chat-link]: https://discord.gg/mobilecoin
 [license-image]: https://img.shields.io/crates/l/{{ cookiecutter.crate_name }}?style=flat-square
 {%- if cookiecutter.type == "single-crate" %}
 {%- if cookiecutter.arch == "sgx" %}

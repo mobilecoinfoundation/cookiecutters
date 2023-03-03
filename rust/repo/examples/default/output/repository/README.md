@@ -10,7 +10,7 @@
 A brief summary of the workspace
 
 [chat-image]: https://img.shields.io/discord/844353360348971068?style=flat-square
-[chat-link]: https://mobilecoin.chat
+[chat-link]: https://discord.gg/mobilecoin
 [license-image]: https://img.shields.io/crates/l/mc-crate-name?style=flat-square
 [deps-image]: https://deps.rs/repo/github/mobilecoinfoundation/repository/status.svg?style=flat-square
 [deps-link]: https://deps.rs/repo/github/mobilecoinfoundation/repository
