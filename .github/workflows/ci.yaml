@@ -20,7 +20,7 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: '3.10'
-      - run: pip install cookiecutter
+      - uses: abatilo/actions-poetry@v2
       - run: ./generate-examples.sh ${{ matrix.cookiecutter_directory }}
       - name: Ensure there are no unaccounted for changes
         run: git diff --quiet --ignore-submodules HEAD

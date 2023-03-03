@@ -6,6 +6,8 @@ rundir=$(dirname $0)
 cookiecutter_directory="$1"
 repository_root="$(git rev-parse --show-toplevel)"
 
+poetry install
+
 for test in $(find "${cookiecutter_directory}/examples" -maxdepth 1 -mindepth 1 -type d); do
 	rm --recursive --force -- "${test}/output"
 	poetry run cookiecutter \
