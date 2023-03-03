@@ -31,6 +31,8 @@ for example in $(find "${cookiecutter_directory}/examples" -maxdepth 1 -mindepth
 
 	generate_example "${example}"
 
+	diff -urN "${default}/output" "${example}/output" > "${example}/from-default.diff" || true
+
 	# Dedupe via symlink
 	rdfind \
 		-checksum sha256 \

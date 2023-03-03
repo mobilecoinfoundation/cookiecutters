@@ -1,0 +1,12 @@
+diff -urN rust/workspace-crate/examples/default/output/crate/name/Cargo.toml rust/workspace-crate/examples/license-agpl3/output/crate/name/Cargo.toml
+--- rust/workspace-crate/examples/default/output/crate/name/Cargo.toml	2023-03-03 15:23:09.703293495 -0800
++++ rust/workspace-crate/examples/license-agpl3/output/crate/name/Cargo.toml	2023-03-03 15:23:10.875267753 -0800
+@@ -8,7 +8,7 @@
+ edition = { workspace = true }
+ # See https://crates.io/keywords for the common keywords
+ keywords = ["blockchain", "serde"]
+-license = { workspace = true }
++license = "AGPL-3.0-only"
+ readme = "README.md"
+ repository = { workspace = true }
+ rust-version = { workspace = true}
