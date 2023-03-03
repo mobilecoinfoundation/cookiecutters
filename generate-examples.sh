@@ -8,7 +8,7 @@ repository_root="$(git rev-parse --show-toplevel)"
 
 for test in $(find "${cookiecutter_directory}/examples" -maxdepth 1 -mindepth 1 -type d); do
 	rm --recursive --force -- "${test}/output"
-	cookiecutter \
+	poetry run cookiecutter \
 		--no-input \
 		--config-file "${test}/cookiecutter.yaml" \
 		--output-dir "${test}/output" \
