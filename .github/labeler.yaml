@@ -13,4 +13,5 @@ github_actions:
 python:
   - '**/*.py'
   - '**/poetry.lock'
+  - '**/pyproject.toml'
   - '**/requirements.txt'
