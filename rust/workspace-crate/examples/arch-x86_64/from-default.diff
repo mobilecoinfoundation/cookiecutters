@@ -1,6 +1,6 @@
 diff -urN rust/workspace-crate/examples/default/output/crate/name/README.md rust/workspace-crate/examples/arch-x86_64/output/crate/name/README.md
---- rust/workspace-crate/examples/default/output/crate/name/README.md	2023-03-03 15:23:09.707293407 -0800
-+++ rust/workspace-crate/examples/arch-x86_64/output/crate/name/README.md	2023-03-03 15:23:10.079285236 -0800
+--- rust/workspace-crate/examples/default/output/crate/name/README.md
++++ rust/workspace-crate/examples/arch-x86_64/output/crate/name/README.md
 @@ -2,7 +2,7 @@
  
  [![Project Chat][chat-image]][chat-link]<!--

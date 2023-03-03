@@ -1,6 +1,6 @@
 diff -urN rust/repo/examples/default/output/repository/crate/name/README.md rust/repo/examples/arch-x86_64/output/repository/crate/name/README.md
---- rust/repo/examples/default/output/repository/crate/name/README.md	2023-03-03 15:22:33.220095447 -0800
-+++ rust/repo/examples/arch-x86_64/output/repository/crate/name/README.md	2023-03-03 15:22:34.992056472 -0800
+--- rust/repo/examples/default/output/repository/crate/name/README.md
++++ rust/repo/examples/arch-x86_64/output/repository/crate/name/README.md
 @@ -2,7 +2,7 @@
  
  [![Project Chat][chat-image]][chat-link]<!--

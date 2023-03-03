@@ -1,6 +1,6 @@
 diff -urN rust/repo/examples/default/output/repository/Cargo.toml rust/repo/examples/license-gpl3/output/repository/Cargo.toml
---- rust/repo/examples/default/output/repository/Cargo.toml	2023-03-03 15:22:33.208095711 -0800
-+++ rust/repo/examples/license-gpl3/output/repository/Cargo.toml	2023-03-03 15:22:34.524066765 -0800
+--- rust/repo/examples/default/output/repository/Cargo.toml
++++ rust/repo/examples/license-gpl3/output/repository/Cargo.toml
 @@ -10,7 +10,7 @@
  [workspace.package]
  authors = ["MobileCoin"]
@@ -11,8 +11,8 @@ diff -urN rust/repo/examples/default/output/repository/Cargo.toml rust/repo/exam
  rust-version = "1.67.1"
  
 diff -urN rust/repo/examples/default/output/repository/deny.toml rust/repo/examples/license-gpl3/output/repository/deny.toml
---- rust/repo/examples/default/output/repository/deny.toml	2023-03-03 15:22:33.192096063 -0800
-+++ rust/repo/examples/license-gpl3/output/repository/deny.toml	2023-03-03 15:22:34.508067116 -0800
+--- rust/repo/examples/default/output/repository/deny.toml
++++ rust/repo/examples/license-gpl3/output/repository/deny.toml
 @@ -19,10 +19,14 @@
      "ISC",
      "MIT",
@@ -31,8 +31,8 @@ diff -urN rust/repo/examples/default/output/repository/deny.toml rust/repo/examp
  confidence-threshold = 0.8
  exceptions = []
 diff -urN rust/repo/examples/default/output/repository/LICENSE rust/repo/examples/license-gpl3/output/repository/LICENSE
---- rust/repo/examples/default/output/repository/LICENSE	2023-03-03 15:22:33.204095800 -0800
-+++ rust/repo/examples/license-gpl3/output/repository/LICENSE	2023-03-03 15:22:34.520066853 -0800
+--- rust/repo/examples/default/output/repository/LICENSE
++++ rust/repo/examples/license-gpl3/output/repository/LICENSE
 @@ -1,203 +1,604 @@
 +GNU GENERAL PUBLIC LICENSE
 +Version 3, 29 June 2007

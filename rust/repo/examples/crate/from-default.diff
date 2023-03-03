@@ -1,6 +1,6 @@
 diff -urN rust/repo/examples/default/output/repository/Cargo.toml rust/repo/examples/crate/output/repository/Cargo.toml
---- rust/repo/examples/default/output/repository/Cargo.toml	2023-03-03 15:22:33.208095711 -0800
-+++ rust/repo/examples/crate/output/repository/Cargo.toml	2023-03-03 15:22:34.072076706 -0800
+--- rust/repo/examples/default/output/repository/Cargo.toml
++++ rust/repo/examples/crate/output/repository/Cargo.toml
 @@ -1,23 +1,22 @@
 -[workspace]
 -members = [
@@ -43,8 +43,8 @@ diff -urN rust/repo/examples/default/output/repository/Cargo.toml rust/repo/exam
 +[dependencies]
 \ No newline at end of file
 diff -urN rust/repo/examples/default/output/repository/crate/name/Cargo.toml rust/repo/examples/crate/output/repository/crate/name/Cargo.toml
---- rust/repo/examples/default/output/repository/crate/name/Cargo.toml	2023-03-03 15:22:33.216095535 -0800
-+++ rust/repo/examples/crate/output/repository/crate/name/Cargo.toml	1969-12-31 16:00:00.000000000 -0800
+--- rust/repo/examples/default/output/repository/crate/name/Cargo.toml
++++ rust/repo/examples/crate/output/repository/crate/name/Cargo.toml
 @@ -1,16 +0,0 @@
 -[package]
 -name = "mc-crate-name"
@@ -63,8 +63,8 @@ diff -urN rust/repo/examples/default/output/repository/crate/name/Cargo.toml rus
 -
 -[dependencies]
 diff -urN rust/repo/examples/default/output/repository/crate/name/README.md rust/repo/examples/crate/output/repository/crate/name/README.md
---- rust/repo/examples/default/output/repository/crate/name/README.md	2023-03-03 15:22:33.220095447 -0800
-+++ rust/repo/examples/crate/output/repository/crate/name/README.md	1969-12-31 16:00:00.000000000 -0800
+--- rust/repo/examples/default/output/repository/crate/name/README.md
++++ rust/repo/examples/crate/output/repository/crate/name/README.md
 @@ -1,21 +0,0 @@
 -# MobileCoin: A brief summary of the crate
 -
@@ -88,8 +88,8 @@ diff -urN rust/repo/examples/default/output/repository/crate/name/README.md rust
 -[deps-image]: https://deps.rs/crate/mc-crate-name/0.1.0/status.svg?style=flat-square
 -[deps-link]: https://deps.rs/crate/mc-crate-name/0.1.0
 diff -urN rust/repo/examples/default/output/repository/crate/name/src/lib.rs rust/repo/examples/crate/output/repository/crate/name/src/lib.rs
---- rust/repo/examples/default/output/repository/crate/name/src/lib.rs	2023-03-03 15:22:33.220095447 -0800
-+++ rust/repo/examples/crate/output/repository/crate/name/src/lib.rs	1969-12-31 16:00:00.000000000 -0800
+--- rust/repo/examples/default/output/repository/crate/name/src/lib.rs
++++ rust/repo/examples/crate/output/repository/crate/name/src/lib.rs
 @@ -1,12 +0,0 @@
 -// Copyright (c) 2023 The MobileCoin Foundation
 -
@@ -104,8 +104,8 @@ diff -urN rust/repo/examples/default/output/repository/crate/name/src/lib.rs rus
 -    }
 -}
 diff -urN rust/repo/examples/default/output/repository/README.md rust/repo/examples/crate/output/repository/README.md
---- rust/repo/examples/default/output/repository/README.md	2023-03-03 15:22:33.196095976 -0800
-+++ rust/repo/examples/crate/output/repository/README.md	2023-03-03 15:22:34.056077059 -0800
+--- rust/repo/examples/default/output/repository/README.md
++++ rust/repo/examples/crate/output/repository/README.md
 @@ -1,17 +1,25 @@
 -# MobileCoin: A brief summary of the workspace
 +# MobileCoin: A brief summary of the crate
@@ -135,8 +135,8 @@ diff -urN rust/repo/examples/default/output/repository/README.md rust/repo/examp
  [deps-link]: https://deps.rs/repo/github/mobilecoinfoundation/repository
  [codecov-image]: https://img.shields.io/codecov/c/github/mobilecoinfoundation/repository/develop?style=flat-square
 diff -urN rust/repo/examples/default/output/repository/src/lib.rs rust/repo/examples/crate/output/repository/src/lib.rs
---- rust/repo/examples/default/output/repository/src/lib.rs	1969-12-31 16:00:00.000000000 -0800
-+++ rust/repo/examples/crate/output/repository/src/lib.rs	2023-03-03 15:22:34.084076443 -0800
+--- rust/repo/examples/default/output/repository/src/lib.rs
++++ rust/repo/examples/crate/output/repository/src/lib.rs
 @@ -0,0 +1,12 @@
 +// Copyright (c) 2023 The MobileCoin Foundation
 +
