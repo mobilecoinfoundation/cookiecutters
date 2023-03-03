@@ -14,7 +14,7 @@ env:
 
 jobs:
   # TODO: Fix automatically
-  rustfmt:
+  lint:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
@@ -23,30 +23,17 @@ jobs:
           components: rustfmt
       - uses: r7kamura/rust-problem-matchers@v1
       - run: cargo fmt --all -- --check
-
-  # TODO: Fix automatically
-  markdown-lint:
-    runs-on: ubuntu-22.04
-    steps:
-      - uses: actions/checkout@v3
       - uses: xt0rted/markdownlint-problem-matcher@v2
       - uses: DavidAnson/markdownlint-cli2-action@v9
         with:
           globs: "**/*.md"
-
-  # TODO: Add problem matcher?
-  yamllint:
-    runs-on: ubuntu-22.04
-    steps:
-      - uses: actions/checkout@v3
+      # FIXME: Add yamllint problem matcher
       - run: yamllint -s .
 
   crev:
     runs-on: ubuntu-22.04
     needs:
-      - "rustfmt"
-      - "markdown-lint"
-      - "yamllint"
+      - lint
     # TODO: once we have enough reviews, make this a required check
     continue-on-error: true
     permissions:
@@ -85,6 +72,7 @@ jobs:
           # - Sort descending by the "LoC" value (first column preceeds first
           #   pipe)
 
+          cargo generate-lockfile --offline
           cargo crev crate verify \
               --for-id vMr-9g5KzKQLsCpkp1tc8o7AR6a0OptjOICjf7NMyHE \
               --show-all \
@@ -125,9 +113,7 @@ jobs:
   deny:
     runs-on: ubuntu-22.04
     needs:
-      - "rustfmt"
-      - "markdown-lint"
-      - "yamllint"
+      - lint
     strategy:
       matrix:
         checks:
@@ -144,9 +130,7 @@ jobs:
   sort:
     runs-on: ubuntu-22.04
     needs:
-      - "rustfmt"
-      - "markdown-lint"
-      - "yamllint"
+      - lint
     steps:
       - uses: actions/checkout@v3
       - uses: dtolnay/rust-toolchain@stable
@@ -157,9 +141,7 @@ jobs:
   clippy:
     runs-on: ubuntu-22.04
     needs:
-      - "rustfmt"
-      - "markdown-lint"
-      - "yamllint"
+      - lint
     strategy:
       matrix:
         rust:
@@ -180,9 +162,7 @@ jobs:
   build:
     runs-on: ubuntu-22.04
     needs:
-      - "rustfmt"
-      - "markdown-lint"
-      - "yamllint"
+      - lint
     strategy:
       matrix:
         rust:
@@ -200,9 +180,7 @@ jobs:
   test:
     runs-on: ubuntu-22.04
     needs:
-      - "rustfmt"
-      - "markdown-lint"
-      - "yamllint"
+      - lint
     strategy:
       matrix:
         rust:
@@ -220,9 +198,7 @@ jobs:
   doc:
     runs-on: ubuntu-22.04
     needs:
-      - "rustfmt"
-      - "markdown-lint"
-      - "yamllint"
+      - lint
     strategy:
       matrix:
         rust:
@@ -241,9 +217,7 @@ jobs:
   coverage:
     runs-on: ubuntu-22.04
     needs:
-      - "rustfmt"
-      - "markdown-lint"
-      - "yamllint"
+      - lint
     steps:
       - uses: actions/checkout@v3
       - uses: dtolnay/rust-toolchain@stable
@@ -259,14 +233,13 @@ jobs:
     runs-on: ubuntu-latest
     if: failure() && ${{ github.event_name }} == 'push'
     needs:
-      - rustfmt
-      - markdown-lint
-      - deny
+      - lint
+      - "deny (bans licenses sources)"
       - sort
-      - clippy
-      - build
-      - test
-      - doc
+      - "clippy (stable)"
+      - "build (stable)"
+      - "test (stable)"
+      - "doc (stable)"
       - coverage
     steps:
       - name: Notify Discord on failure

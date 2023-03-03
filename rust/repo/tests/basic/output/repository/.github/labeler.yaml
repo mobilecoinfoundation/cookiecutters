@@ -4,10 +4,12 @@ rust:
   - '**/Cargo.lock'
   - '**/Cargo.toml'
 
-dependencies:
-  - '**/Cargo.lock'
-
 github_actions:
   - '.github/workflows/**'
   - '.github/labeler.yaml'
   - '.github/triage-labeler.yaml'
+
+python:
+  - '**.py'
+  - '**/pyproject.toml'
+  - '**/poetry.lock'
