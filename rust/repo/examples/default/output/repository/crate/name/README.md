@@ -10,7 +10,7 @@
 A brief summary of the crate
 
 [chat-image]: https://img.shields.io/discord/844353360348971068?style=flat-square
-[chat-link]: https://mobilecoin.chat
+[chat-link]: https://discord.gg/mobilecoin
 [license-image]: https://img.shields.io/crates/l/mc-crate-name?style=flat-square
 [arch-image]: https://img.shields.io/badge/arch-any-brightgreen?style=flat-square
 [crate-image]: https://img.shields.io/crates/v/mc-crate-name.svg?style=flat-square
