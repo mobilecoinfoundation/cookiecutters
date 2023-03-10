@@ -30,7 +30,7 @@ license = "{{ cookiecutter.license }}"
 readme = "README.md"
 {%- endif %}
 repository = "https://github.com/mobilecoinfoundation/{{ cookiecutter.repo_name }}"
-rust-version = "1.67.1"
+rust-version = "1.68"
 
 [profile.release]
 lto = "thin"
