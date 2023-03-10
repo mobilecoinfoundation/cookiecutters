@@ -12,7 +12,7 @@ authors = ["MobileCoin"]
 edition = "2021"
 license = "Apache-2.0"
 repository = "https://github.com/mobilecoinfoundation/repository"
-rust-version = "1.67.1"
+rust-version = "1.68"
 
 [profile.release]
 lto = "thin"
