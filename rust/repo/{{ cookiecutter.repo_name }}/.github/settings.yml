@@ -1,9 +1,9 @@
 ---
 repository:
-  name: cookiecutters
-  description: MobileCoin Foundation Project Templates
+  name: {{ cookiecutter.repo_name }}
+  description: {{ cookiecutter.workspace_description }}
   homepage: https://mobilecoin.foundation/
-  topics: templates
+  topics: {{ cookiecutter.crate_categories.split() | join(', ') }}
   private: false
   has_issues: true
   has_projects: false
@@ -65,10 +65,10 @@ labels:
 collaborator:
   - username: meowblecoinbot
     permission: triage
-  - username: nick-mobilecoin
+{%- for owner in cookiecutter.owners.split(): %}
+  - username: {{ owner[1:] }}
     permission: maintain
-  - username: jcape
-    permission: maintain
+{%- endfor -%}
 
 teams:
   - name: coredev
@@ -87,6 +87,12 @@ branches:
         strict: false
         contexts:
           - lint
+          - deny
+          - sort
+          - clippy
+          - build
+          - test
+          - coverage
       enforce_admins: true
       required_linear_history: true
       restrictions: null

@@ -51,9 +51,11 @@ jobs:
             ~/.cargo/git/db/
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.toml') }}
           restore-keys: ${{ runner.os }}-cargo-
-      - name: Install Crev
+      - uses: taiki-e/install-action@v2
+        with:
+          tool: cargo-crev
+      - name: Configure Crev
         run: |
-          cargo install cargo-crev || true
           cargo crev trust \
             --level high \
             --no-commit https://github.com/mobilecoinfoundation/crev-proofs
@@ -133,7 +135,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: dtolnay/rust-toolchain@stable
-      - run: cargo install cargo-sort
+      - uses: taiki-e/install-action@v2
+        with:
+          tool: cargo-sort
       - run: cargo sort --workspace --check >/dev/null
       # TODO: Fix automatically
 
@@ -222,7 +226,9 @@ jobs:
       - uses: dtolnay/rust-toolchain@stable
         with:
           components: llvm-tools-preview
-      - uses: taiki-e/install-action@cargo-llvm-cov
+      - uses: taiki-e/install-action@v2
+        with:
+          tool: cargo-llvm-cov
       - run: cargo llvm-cov --workspace --lcov --output-path lcov.info
       - uses: codecov/codecov-action@v3
         with:
