@@ -62,7 +62,7 @@ labels:
     color: '#ed1717'
     description: PRs that should get broken down
 
-collaborator:
+collaborators:
   - username: meowblecoinbot
     permission: triage
   - username: testuser
