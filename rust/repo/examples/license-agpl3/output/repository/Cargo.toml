@@ -24,10 +24,6 @@ consolidate-commits = true
 consolidate-pushes = true
 tag-name = "v{{version}}"
 pre-release-replacements = [
+    # Files listed here must exist in all crates in this workspace
     { file = "README.md", search = "mc-[a-z-]+/[0-9.]+", replace = "{{crate_name}}/{{version}}" },
-    { file = "CHANGELOG.md", search = "Unreleased", replace = "{{version}}", min = 1 },
-    { file = "CHANGELOG.md", search = "\\.\\.\\.HEAD", replace="...{{tag_name}}", exactly = 1 },
-    { file = "CHANGELOG.md", search = "ReleaseDate", replace= "{{date}}", min = 1},
-    { file = "CHANGELOG.md", search = "<!-- next-header -->", replace="<!-- next-header -->\n## [Unreleased] - ReleaseDate\n", exactly = 1 },
-    { file = "CHANGELOG.md", search = "<!-- next-url -->", replace="<!-- next-url -->\n[Unreleased]: https://github.com/mobilecoinfoundation/repository/compare/{{tag_name}}...HEAD", exactly = 1},
 ]
