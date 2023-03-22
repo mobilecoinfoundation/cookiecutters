@@ -37,7 +37,7 @@ jobs:
         with:
           globs: "**/*.md"
       # FIXME: Add yamllint problem matcher
-      - run: yamllint -s .
+      - run: yamllint -s .github */*/examples
 
   notify:
     runs-on: ubuntu-latest

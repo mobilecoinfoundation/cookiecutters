@@ -1,9 +1,9 @@
 ---
 repository:
-  name: {{ cookiecutter.repo_name }}
-  description: {{ cookiecutter.workspace_description }}
+  name: "{{ cookiecutter.repo_name }}"
+  description: "{{ cookiecutter.workspace_description }}"
   homepage: https://mobilecoin.foundation/
-  topics: {{ cookiecutter.crate_categories.split() | join(', ') }}
+  topics: "{{ cookiecutter.crate_categories.split() | join(', ') }}"
   private: false
   has_issues: true
   has_projects: false
@@ -68,7 +68,7 @@ collaborator:
 {%- for owner in cookiecutter.owners.split(): %}
   - username: {{ owner[1:] }}
     permission: maintain
-{%- endfor -%}
+{%- endfor %}
 
 teams:
   - name: coredev

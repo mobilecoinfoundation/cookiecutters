@@ -1,9 +1,9 @@
 ---
 repository:
-  name: repository
-  description: A brief summary of the workspace
+  name: "repository"
+  description: "A brief summary of the workspace"
   homepage: https://mobilecoin.foundation/
-  topics: cryptography, no-std
+  topics: "cryptography, no-std"
   private: false
   has_issues: true
   has_projects: false
@@ -68,7 +68,9 @@ collaborator:
   - username: testuser
     permission: maintain
   - username: jcape
-    permission: maintainteams:
+    permission: maintain
+
+teams:
   - name: coredev
     permission: push
 
