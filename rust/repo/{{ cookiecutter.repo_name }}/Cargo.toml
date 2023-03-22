@@ -37,7 +37,7 @@ lto = "thin"
 {% if cookiecutter.type == "workspace" %}
 [workspace.metadata.release]
 {%- else %}
-[metadata.release]
+[package.metadata.release]
 {%- endif %}
 shared-version = true
 dev-version-ext = "beta.0"

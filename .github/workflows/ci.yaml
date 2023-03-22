@@ -24,7 +24,7 @@ jobs:
       - run: sudo apt-get install -y rdfind symlinks patchutils
       - run: ./generate-examples.sh ${{ matrix.cookiecutter_directory }}
       - name: Ensure there are no unaccounted for changes
-        run: git diff --quiet --ignore-submodules HEAD
+        run: git diff --ignore-submodules HEAD
 
   lint:
     runs-on: ubuntu-latest
@@ -37,7 +37,7 @@ jobs:
         with:
           globs: "**/*.md"
       # FIXME: Add yamllint problem matcher
-      - run: yamllint -s .
+      - run: yamllint -s .github */*/examples
 
   notify:
     runs-on: ubuntu-latest

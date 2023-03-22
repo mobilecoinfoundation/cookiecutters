@@ -15,3 +15,6 @@ python:
   - '**/poetry.lock'
   - '**/pyproject.toml'
   - '**/requirements.txt'
+
+javascript:
+  - '**.js'

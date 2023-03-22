@@ -1,9 +1,9 @@
 ---
 repository:
-  name: cookiecutters
-  description: MobileCoin Foundation Project Templates
+  name: "repository"
+  description: "A brief summary of the workspace"
   homepage: https://mobilecoin.foundation/
-  topics: templates
+  topics: "cryptography, no-std"
   private: false
   has_issues: true
   has_projects: false
@@ -62,10 +62,10 @@ labels:
     color: '#ed1717'
     description: PRs that should get broken down
 
-collaborator:
+collaborators:
   - username: meowblecoinbot
     permission: triage
-  - username: nick-mobilecoin
+  - username: testuser
     permission: maintain
   - username: jcape
     permission: maintain
@@ -87,6 +87,12 @@ branches:
         strict: false
         contexts:
           - lint
+          - deny
+          - sort
+          - clippy
+          - build
+          - test
+          - coverage
       enforce_admins: true
       required_linear_history: true
       restrictions: null
