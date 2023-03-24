@@ -27,8 +27,9 @@ jobs:
         run: |-
           set +e
           git diff --quiet --ignore-submodules HEAD
-          set -e
           RESULT=$?
+          set -e
+
           if [[ $RESULT != 0 ]]; then
             echo "Please run generate-examples.sh to update examples." 1>&2
             git diff --ignore-submodules HEAD
