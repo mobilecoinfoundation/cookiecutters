@@ -24,7 +24,17 @@ jobs:
       - run: sudo apt-get install -y rdfind symlinks patchutils
       - run: ./generate-examples.sh ${{ matrix.cookiecutter_directory }}
       - name: Ensure there are no unaccounted for changes
-        run: git diff --ignore-submodules HEAD
+        run: |-
+          set +e
+          git diff --quiet --ignore-submodules HEAD
+          RESULT=$?
+          set -e
+
+          if [[ $RESULT != 0 ]]; then
+            echo "Please run generate-examples.sh to update examples." 1>&2
+            git diff --ignore-submodules HEAD
+          fi
+          exit $RESULT
 
   lint:
     runs-on: ubuntu-latest
