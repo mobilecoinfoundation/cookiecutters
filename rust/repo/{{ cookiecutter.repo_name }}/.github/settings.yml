@@ -67,7 +67,7 @@ collaborators:
     permission: triage
 {%- for owner in cookiecutter.owners.split(): %}
   - username: {{ owner[1:] }}
-    permission: maintain
+    permission: admin
 {%- endfor %}
 
 teams:
@@ -85,13 +85,31 @@ branches:
       required_conversation_resolution: true
       required_status_checks:
         strict: false
+        # These names need to match the matrix job name.
+        # For example if one had a job like:
+        #
+        #   build:
+        #     runs-on: ubuntu-22.04
+        #     needs:
+        #       - lint
+        #     strategy:
+        #       matrix:
+        #         rust:
+        #           - stable
+        #           - beta
+        #           - nightly-2023-01-04
+        #
+        # Then the matrix names would be:
+        #   - "build (stable)"
+        #   - "build (beta)"
+        #   - "build (nightly-2023-01-04)"
         contexts:
           - lint
-          - deny
+          - "deny (bans licenses sources)"
           - sort
-          - clippy
-          - build
-          - test
+          - "clippy (stable)"
+          - "build (stable)"
+          - "test (stable)"
           - coverage
       enforce_admins: true
       required_linear_history: true
