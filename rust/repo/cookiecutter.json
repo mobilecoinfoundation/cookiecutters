@@ -3,7 +3,11 @@
       ".github/workflows/*"
   ],
   "repo_name": "repository",
+  "repo_homepage": "https://mobilecoin.foundation/",
+  "github_org": "mobilecoinfoundation",
+  "github_teams": "coredev other_team",
   "github_username": "@your_github_username",
+  "default_branch": "main",
   "owners": "{{ cookiecutter.github_username }} @jcape",
   "type": [
     "workspace",

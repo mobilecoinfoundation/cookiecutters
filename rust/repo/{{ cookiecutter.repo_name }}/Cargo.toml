@@ -29,7 +29,7 @@ license = "{{ cookiecutter.license }}"
 {%- if cookiecutter.type == "single-crate" %}
 readme = "README.md"
 {%- endif %}
-repository = "https://github.com/mobilecoinfoundation/{{ cookiecutter.repo_name }}"
+repository = "https://github.com/{{ cookiecutter.github_org }}/{{ cookiecutter.repo_name }}"
 rust-version = "1.68"
 
 [profile.release]
