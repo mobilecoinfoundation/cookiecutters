@@ -15,10 +15,12 @@ jobs:
       - uses: actions/checkout@v3
       - uses: FantasticFiasco/action-update-license-year@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.MEOWBLECOIN_PAT }}
           path: |
             **/*.rs
             **/*.proto
-          assignees: '@mobilecoinfoundation/coredev'
+          # yamllint disable rule:line-length
+          assignees: '@mobilecoinfoundation/coredev,@mobilecoinfoundation/other_team'
+          # yamllint enable rule:line-length
           labels: "copyright"
           transform: (?<=^\/\/ Copyright \(c\) )(?<from>\d{4})?-?(\d{4})?
