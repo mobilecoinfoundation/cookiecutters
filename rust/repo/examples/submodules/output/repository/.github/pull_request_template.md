@@ -1,0 +1,1 @@
+../../../../default/output/repository/.github/pull_request_template.md

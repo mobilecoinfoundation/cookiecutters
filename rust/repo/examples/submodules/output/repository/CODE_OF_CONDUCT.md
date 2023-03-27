@@ -1,0 +1,1 @@
+../../../default/output/repository/CODE_OF_CONDUCT.md

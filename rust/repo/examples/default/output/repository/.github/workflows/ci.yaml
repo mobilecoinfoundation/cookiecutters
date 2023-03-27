@@ -39,6 +39,10 @@ jobs:
       pull-requests: write
     steps:
       - uses: actions/checkout@v3
+{%- if cookiecutter.submodules == 'true' %}
+        with:
+          submodules: true
+{%- endif %}
       - uses: dtolnay/rust-toolchain@stable
       - uses: actions/cache@v3
         continue-on-error: false
@@ -123,6 +127,10 @@ jobs:
       fail-fast: false
     steps:
       - uses: actions/checkout@v3
+{%- if cookiecutter.submodules == 'true' %}
+        with:
+          submodules: true
+{%- endif %}
       - uses: dtolnay/rust-toolchain@stable
       - uses: EmbarkStudios/cargo-deny-action@v1
         with:
@@ -153,6 +161,10 @@ jobs:
       fail-fast: false
     steps:
       - uses: actions/checkout@v3
+{%- if cookiecutter.submodules == 'true' %}
+        with:
+          submodules: true
+{%- endif %}
       - uses: dtolnay/rust-toolchain@master
         with:
           toolchain: ${{ matrix.rust }}
@@ -174,6 +186,10 @@ jobs:
           - nightly-2023-01-04
     steps:
       - uses: actions/checkout@v3
+{%- if cookiecutter.submodules == 'true' %}
+        with:
+          submodules: true
+{%- endif %}
       - uses: dtolnay/rust-toolchain@master
         with:
           toolchain: ${{ matrix.rust }}
@@ -192,6 +208,10 @@ jobs:
           - nightly-2023-01-04
     steps:
       - uses: actions/checkout@v3
+{%- if cookiecutter.submodules == 'true' %}
+        with:
+          submodules: true
+{%- endif %}
       - uses: dtolnay/rust-toolchain@master
         with:
           toolchain: ${{ matrix.rust }}
@@ -211,6 +231,10 @@ jobs:
     continue-on-error: ${{ matrix.rust == 'beta' }}
     steps:
       - uses: actions/checkout@v3
+{%- if cookiecutter.submodules == 'true' %}
+        with:
+          submodules: true
+{%- endif %}
       - uses: dtolnay/rust-toolchain@master
         with:
           toolchain: ${{ matrix.rust }}
@@ -223,6 +247,10 @@ jobs:
       - lint
     steps:
       - uses: actions/checkout@v3
+{%- if cookiecutter.submodules == 'true' %}
+        with:
+          submodules: true
+{%- endif %}
       - uses: dtolnay/rust-toolchain@stable
         with:
           components: llvm-tools-preview

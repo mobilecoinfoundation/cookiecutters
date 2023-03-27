@@ -20,8 +20,8 @@
     "sgx"
   ],
   "submodules": [
-    false,
-    true
+    "false",
+    "true"
   ],
   "workspace_description": "A brief summary of the workspace",
   "workspace_readme_title": "MobileCoin: {{ cookiecutter.workspace_description }}",

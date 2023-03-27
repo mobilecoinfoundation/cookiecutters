@@ -17,10 +17,6 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
-{%- if cookiecutter.submodules %}
-        with:
-          submodules: true
-{%- endif %}
       - uses: dtolnay/rust-toolchain@stable
         with:
           components: rustfmt
@@ -43,7 +39,7 @@ jobs:
       pull-requests: write
     steps:
       - uses: actions/checkout@v3
-{%- if cookiecutter.submodules %}
+{%- if cookiecutter.submodules == 'true' %}
         with:
           submodules: true
 {%- endif %}
@@ -131,7 +127,7 @@ jobs:
       fail-fast: false
     steps:
       - uses: actions/checkout@v3
-{%- if cookiecutter.submodules %}
+{%- if cookiecutter.submodules == 'true' %}
         with:
           submodules: true
 {%- endif %}
@@ -146,10 +142,6 @@ jobs:
       - lint
     steps:
       - uses: actions/checkout@v3
-{%- if cookiecutter.submodules %}
-        with:
-          submodules: true
-{%- endif %}
       - uses: dtolnay/rust-toolchain@stable
       - uses: taiki-e/install-action@v2
         with:
@@ -169,6 +161,10 @@ jobs:
       fail-fast: false
     steps:
       - uses: actions/checkout@v3
+{%- if cookiecutter.submodules == 'true' %}
+        with:
+          submodules: true
+{%- endif %}
       - uses: dtolnay/rust-toolchain@master
         with:
           toolchain: ${{ matrix.rust }}
@@ -190,7 +186,7 @@ jobs:
           - nightly-2023-01-04
     steps:
       - uses: actions/checkout@v3
-{%- if cookiecutter.submodules %}
+{%- if cookiecutter.submodules == 'true' %}
         with:
           submodules: true
 {%- endif %}
@@ -212,7 +208,7 @@ jobs:
           - nightly-2023-01-04
     steps:
       - uses: actions/checkout@v3
-{%- if cookiecutter.submodules %}
+{%- if cookiecutter.submodules == 'true' %}
         with:
           submodules: true
 {%- endif %}
@@ -235,6 +231,10 @@ jobs:
     continue-on-error: ${{ matrix.rust == 'beta' }}
     steps:
       - uses: actions/checkout@v3
+{%- if cookiecutter.submodules == 'true' %}
+        with:
+          submodules: true
+{%- endif %}
       - uses: dtolnay/rust-toolchain@master
         with:
           toolchain: ${{ matrix.rust }}
@@ -247,7 +247,7 @@ jobs:
       - lint
     steps:
       - uses: actions/checkout@v3
-{%- if cookiecutter.submodules %}
+{%- if cookiecutter.submodules == 'true' %}
         with:
           submodules: true
 {%- endif %}
