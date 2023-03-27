@@ -1,6 +1,6 @@
 # These lines impact repository security
-/.github/CODEOWNERS        @nick-mobilecoin @jcape
-/.github/settings.yml      @nick-mobilecoin @jcape
+/.github/CODEOWNERS        @nick-mobilecoin @jcape @cbeck88
+/.github/settings.yml      @nick-mobilecoin @jcape @cbeck88
 
 # These lines prevent reviews of trivial changes blocking on particular users
 /.gitignore
@@ -9,5 +9,5 @@
 /README.md
 
 # These lines represent original authors and new maintainers
-/.github                   @nick-mobilecoin @jcape
-/rust                      @nick-mobilecoin @jcape
+/.github                   @nick-mobilecoin @jcape @cbeck88
+/rust                      @nick-mobilecoin @jcape @cbeck88
