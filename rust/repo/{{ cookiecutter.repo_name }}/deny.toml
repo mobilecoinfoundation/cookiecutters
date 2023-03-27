@@ -20,14 +20,11 @@ allow = [
     "MIT",
     "Unicode-DFS-2016",
 {%- if cookiecutter.license in ("GPL-3.0-only", "AGPL-3.0-only") %}
-    "GPL-3.0-only",
-    "GPL-3.0-or-later",
-    "LGPL-3.0-only",
-    "LGPL-3.0-or-later",
+    "GPL-3.0",
+    "LGPL-3.0",
 {%- endif -%}
 {%- if cookiecutter.license == "AGPL-3.0-only" %}
-    "AGPL-3.0-only",
-    "AGPL-3.0-or-later",
+    "AGPL-3.0",
 {%- endif %}
 ]
 deny = []
