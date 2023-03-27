@@ -35,14 +35,14 @@ workspace.
 > `cookiecutter`.
 
 Invoking cookiecutter with this repository's URL and this directory,
-`gh:mobilecoinfoundation/cookiecutters --directory rust-workspace` will begin
+`gh:mobilecoinfoundation/cookiecutters --directory rust/repo` will begin
 the process of creating a workspace using the template.  
 
 The first line is the `cookiecutter` invocation. The subsequent lines are
 prompts from `cookiecutter`.
 
 ```console
-> cookiecutter gh:mobilecoinfoundation/cookiecutters --directory rust-workspace
+> cookiecutter gh:mobilecoinfoundation/cookiecutters --directory rust/repo
 
 repo_name [repository]: a_new_repo
 workspace_description [A brief summary of the workspace]: My entered description of `a_new_repo`
@@ -139,7 +139,7 @@ Some things to point out:
 If starting locally one can do:
 
 ```console
-cookiecutter gh:mobilecoinfoundation/cookiecutters --directory rust-workspace
+cookiecutter gh:mobilecoinfoundation/cookiecutters --directory rust/repo
 ... prompts
 
 cd <repo_name>
@@ -157,7 +157,7 @@ cookiecutter:
 
 ```console
 git clone https://github.com/mobilecoinfoundation/<repo_name>
-cookiecutter gh:mobilecoinfoundation/cookiecutters --directory rust-workspace --overwrite-if-exists 
+cookiecutter gh:mobilecoinfoundation/cookiecutters --directory rust/repo --overwrite-if-exists 
 cd <repo_name>
 git add .
 git commit
