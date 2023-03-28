@@ -1,9 +1,16 @@
 {
   "_copy_without_render": [
-      ".github/workflows/*"
+      ".github/workflows/ci.yaml",
+      ".github/workflows/issues.yaml",
+      ".github/workflows/pr-assign.yaml",
+      ".github/workflows/pr.yaml"
   ],
   "repo_name": "repository",
+  "repo_homepage": "https://mobilecoin.foundation/",
+  "github_org": "mobilecoinfoundation",
+  "github_teams": "coredev other_team",
   "github_username": "@your_github_username",
+  "default_branch": "main",
   "owners": "{{ cookiecutter.github_username }} @jcape",
   "type": [
     "workspace",

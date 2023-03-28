@@ -20,7 +20,7 @@ jobs:
             **/*.rs
             **/*.proto
           # yamllint disable rule:line-length
-          assignees: '@mobilecoinfoundation/coredev,@mobilecoinfoundation/other_team'
+          assignees: '@example/test_team'
           # yamllint enable rule:line-length
           labels: "copyright"
           transform: (?<=^\/\/ Copyright \(c\) )(?<from>\d{4})?-?(\d{4})?

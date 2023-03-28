@@ -13,6 +13,7 @@ function generate_example() {
 	rm --recursive --force -- "${example}/output"
 	poetry run cookiecutter \
 		--no-input \
+		--verbose \
 		--config-file "${example}/cookiecutter.yaml" \
 		--output-dir "${example}/output" \
 		--directory "${cookiecutter_directory}" \

@@ -2,7 +2,7 @@
 repository:
   name: "repository"
   description: "A brief summary of the workspace"
-  homepage: https://mobilecoin.foundation/
+  homepage: https://example.domain
   topics: "cryptography, no-std"
   private: false
   has_issues: true
@@ -71,9 +71,7 @@ collaborators:
     permission: admin
 
 teams:
-  - name: coredev
-    permission: push
-  - name: other_team
+  - name: test_team
     permission: push
 
 branches:
