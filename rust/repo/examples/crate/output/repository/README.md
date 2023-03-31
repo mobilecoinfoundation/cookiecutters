@@ -20,8 +20,8 @@ A brief summary of the crate
 [crate-link]: https://crates.io/crates/mc-crate-name
 [docs-image]: https://img.shields.io/docsrs/mc-crate-name?style=flat-square
 [docs-link]: https://docs.rs/crate/mc-crate-name
-[deps-image]: https://deps.rs/repo/github/mobilecoinfoundation/repository/status.svg?style=flat-square
-[deps-link]: https://deps.rs/repo/github/mobilecoinfoundation/repository
+[deps-image]: https://deps.rs/crate/mc-crate-name/0.1.0/status.svg?style=flat-square
+[deps-link]: https://deps.rs/crate/mc-crate-name/0.1.0
 [codecov-image]: https://img.shields.io/codecov/c/github/mobilecoinfoundation/repository/main?style=flat-square
 [codecov-link]: https://codecov.io/gh/mobilecoinfoundation/repository
 [gha-image]: https://img.shields.io/github/actions/workflow/status/mobilecoinfoundation/repository/ci.yaml?branch=main&style=flat-square
