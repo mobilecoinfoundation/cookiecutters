@@ -7,7 +7,7 @@ repository:
   private: false
   has_issues: true
   has_projects: false
-  has_wiki: true
+  has_wiki: false
   has_downloads: false
   default_branch: main
   allow_squash_merge: true
@@ -65,10 +65,14 @@ labels:
 collaborator:
   - username: meowblecoinbot
     permission: triage
-  - username: nick-mobilecoin
-    permission: maintain
+  - username: cbeck88
+    permission: admin
   - username: jcape
-    permission: maintain
+    permission: admin
+  - username: nick-mobilecoin
+    permission: admin
+  - username: samdealy
+    permission: admin
 
 teams:
   - name: coredev
