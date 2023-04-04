@@ -48,42 +48,13 @@ pre-release-replacements = [
 {%- if cookiecutter.type == "workspace" %}
     # Files listed here must exist in all crates in this workspace
 {%- endif %}
-    {
-        file = "README.md",
-        search = "{{ cookiecutter.crate_namespace_prefix }}[a-z-]+/[0-9.]+",
-        replace = "{{ "{{crate_name}}/{{version}}" }}"
-    },
+    { file = "README.md", search = "{{ cookiecutter.crate_namespace_prefix }}[a-z-]+/[0-9.]+", replace = "{{ "{{crate_name}}/{{version}}" }}" },
 {%- if cookiecutter.type == "single-crate" %}
-    {
-        file = "CHANGELOG.md",
-        search = "Unreleased",
-        replace = "{{ '{{version}}' }}",
-        min = 1
-    },
-    {
-        file = "CHANGELOG.md",
-        search = "\\.\\.\\.HEAD",
-        replace="...{{ '{{tag_name}}' }}",
-        exactly = 1
-    },
-    {
-        file = "CHANGELOG.md",
-        search = "ReleaseDate",
-        replace= "{{ '{{date}}' }}",
-        min = 1
-    },
-    {
-        file = "CHANGELOG.md",
-        search = "<!-- next-header -->",
-        replace="<!-- next-header -->\n## [Unreleased] - ReleaseDate\n",
-        exactly = 1
-    },
-    {
-        file = "CHANGELOG.md",
-        search = "<!-- next-url -->",
-        replace="<!-- next-url -->\n[Unreleased]: https://github.com/{{ cookiecutter.github_org }}/{{ cookiecutter.repo_name }}/compare/{{ '{{tag_name}}' }}...HEAD",
-        exactly = 1
-    },
+    { file = "CHANGELOG.md", search = "Unreleased", replace = "{{ '{{version}}' }}", min = 1 },
+    { file = "CHANGELOG.md", search = "\\.\\.\\.HEAD", replace="...{{ '{{tag_name}}' }}", exactly = 1 },
+    { file = "CHANGELOG.md", search = "ReleaseDate", replace= "{{ '{{date}}' }}", min = 1 },
+    { file = "CHANGELOG.md", search = "<!-- next-header -->", replace="<!-- next-header -->\n## [Unreleased] - ReleaseDate\n", exactly = 1 },
+    { file = "CHANGELOG.md", search = "<!-- next-url -->", replace="<!-- next-url -->\n[Unreleased]: https://github.com/{{ cookiecutter.github_org }}/{{ cookiecutter.repo_name }}/compare/{{ '{{tag_name}}' }}...HEAD", exactly = 1 },
 {%- endif %}
 ]
 {% if cookiecutter.type == "single-crate" %}
