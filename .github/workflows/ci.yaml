@@ -17,6 +17,8 @@ jobs:
           - rust/workspace-crate
     steps:
       - uses: actions/checkout@v3
+        with:
+          submodules: true
       - uses: actions/setup-python@v4
         with:
           python-version: '3.10'
@@ -42,6 +44,8 @@ jobs:
       - rendering
     steps:
       - uses: actions/checkout@v3
+        with:
+          submodules: true
       - uses: xt0rted/markdownlint-problem-matcher@v2
       - uses: DavidAnson/markdownlint-cli2-action@v9
         with:

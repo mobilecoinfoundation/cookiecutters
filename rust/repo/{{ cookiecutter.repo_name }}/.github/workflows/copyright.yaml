@@ -13,6 +13,8 @@ jobs:
       pull-requests: write
     steps:
       - uses: actions/checkout@v3
+        with:
+          submodules: true
       - uses: FantasticFiasco/action-update-license-year@v3
         with:
           token: {{ '${{ secrets.MEOWBLECOIN_PAT }}' }}
