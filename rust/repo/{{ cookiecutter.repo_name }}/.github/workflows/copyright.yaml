@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          submodules: true
+          submodules: recursive
       - uses: FantasticFiasco/action-update-license-year@v3
         with:
           token: {{ '${{ secrets.MEOWBLECOIN_PAT }}' }}

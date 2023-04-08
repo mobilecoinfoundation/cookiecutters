@@ -18,7 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          submodules: true
+          submodules: recursive
       - uses: dtolnay/rust-toolchain@stable
         with:
           components: rustfmt
@@ -42,7 +42,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          submodules: true
+          submodules: recursive
       - uses: dtolnay/rust-toolchain@stable
       - uses: actions/cache@v3
         continue-on-error: false
@@ -128,7 +128,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          submodules: true
+          submodules: recursive
       - uses: dtolnay/rust-toolchain@stable
       - uses: EmbarkStudios/cargo-deny-action@v1
         with:
@@ -141,7 +141,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          submodules: true
+          submodules: recursive
       - uses: dtolnay/rust-toolchain@stable
       - uses: taiki-e/install-action@v2
         with:
@@ -162,7 +162,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          submodules: true
+          submodules: recursive
       - uses: dtolnay/rust-toolchain@master
         with:
           toolchain: ${{ matrix.rust }}
@@ -185,7 +185,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          submodules: true
+          submodules: recursive
       - uses: dtolnay/rust-toolchain@master
         with:
           toolchain: ${{ matrix.rust }}
@@ -205,7 +205,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          submodules: true
+          submodules: recursive
       - uses: dtolnay/rust-toolchain@master
         with:
           toolchain: ${{ matrix.rust }}
@@ -226,7 +226,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          submodules: true
+          submodules: recursive
       - uses: dtolnay/rust-toolchain@master
         with:
           toolchain: ${{ matrix.rust }}
@@ -240,7 +240,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          submodules: true
+          submodules: recursive
       - uses: dtolnay/rust-toolchain@stable
         with:
           components: llvm-tools-preview
