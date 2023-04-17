@@ -39,6 +39,7 @@ jobs:
     continue-on-error: true
     permissions:
       pull-requests: write
+      contents: read
     steps:
       - uses: actions/checkout@v3
         with:
