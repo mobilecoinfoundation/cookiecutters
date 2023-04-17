@@ -73,6 +73,8 @@ collaborator:
     permission: admin
   - username: samdealy
     permission: admin
+  - username: eranrund
+    permission: admin
 
 teams:
   - name: coredev
