@@ -38,8 +38,8 @@ jobs:
     # TODO: once we have enough reviews, make this a required check
     continue-on-error: true
     permissions:
-      pull-requests: write
       contents: read
+      pull-requests: write
     steps:
       - uses: actions/checkout@v3
         with:
