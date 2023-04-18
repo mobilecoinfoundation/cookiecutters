@@ -58,7 +58,9 @@ jobs:
           restore-keys: ${{ runner.os }}-cargo-
       - uses: taiki-e/install-action@v2
         with:
-          tool: cargo-crev
+          # Pinning to 0.23 due to
+          # https://github.com/crev-dev/cargo-crev/issues/598
+          tool: cargo-crev@0.23
       - name: Configure Crev
         run: |
           cargo crev trust \
