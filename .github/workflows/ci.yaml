@@ -38,6 +38,33 @@ jobs:
           fi
           exit $RESULT
 
+  mac-rendering:
+    runs-on: macos-latest
+    needs:
+      - rendering
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: recursive
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - uses: abatilo/actions-poetry@v2
+      - run: brew install rdfind symlinks
+      - run: ./generate-examples.sh rust/repo
+      - name: Ensure there are no unaccounted for changes
+        run: |-
+          set +e
+          git diff --quiet --ignore-submodules HEAD
+          RESULT=$?
+          set -e
+
+          if [[ $RESULT != 0 ]]; then
+            echo "Mac example generation differs from linux veresion" 1>&2
+            git diff --ignore-submodules HEAD
+          fi
+          exit $RESULT
+
   lint:
     runs-on: ubuntu-latest
     needs:
