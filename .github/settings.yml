@@ -77,7 +77,7 @@ collaborators:
     permission: admin
 
 teams:
-  - name: coredev
+  - name: eng
     permission: push
 
 branches:
