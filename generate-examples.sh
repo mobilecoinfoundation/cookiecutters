@@ -10,7 +10,7 @@ repository_root="$(git rev-parse --show-toplevel)"
 function generate_example() {
 	example="$1"
 	echo "Generating ${example}"
-	rm --recursive --force -- "${example}/output"
+	rm -rf "${example}/output"
 	poetry run cookiecutter \
 		--no-input \
 		--verbose \
@@ -41,7 +41,7 @@ for example in $(find "${cookiecutter_directory}/examples" -maxdepth 1 -mindepth
 		"${example}/output"
 
 	# Make .gitignore a hardlink
-	find -type l -name ".gitignore" -exec bash -c 'ln -f "$(readlink -m "$0")" "$0"' {} \;
+	find . -type l -name ".gitignore" -exec bash -c 'ln -f "$(readlink "$0")" "$0"' {} \;
 
 	# Make symlinks relative
 	symlinks -cr "${example}/output"
