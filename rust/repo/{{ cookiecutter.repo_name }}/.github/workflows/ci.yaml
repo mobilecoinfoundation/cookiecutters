@@ -184,7 +184,7 @@ jobs:
         rust:
           - stable
           - beta
-          - nightly-2023-01-04
+          - nightly-2023-01-22
     steps:
       - uses: actions/checkout@v3
         with:
@@ -204,7 +204,7 @@ jobs:
         rust:
           - stable
           - beta
-          - nightly-2023-01-04
+          - nightly-2023-01-22
     steps:
       - uses: actions/checkout@v3
         with:

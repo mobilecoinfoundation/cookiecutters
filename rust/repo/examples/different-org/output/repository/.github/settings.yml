@@ -96,12 +96,12 @@ branches:
         #         rust:
         #           - stable
         #           - beta
-        #           - nightly-2023-01-04
+        #           - nightly-2023-01-22
         #
         # Then the matrix names would be:
         #   - "build (stable)"
         #   - "build (beta)"
-        #   - "build (nightly-2023-01-04)"
+        #   - "build (nightly-2023-01-22)"
         contexts:
           - lint
           - "deny (bans licenses sources)"
