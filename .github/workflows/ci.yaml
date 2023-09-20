@@ -74,7 +74,7 @@ jobs:
         with:
           submodules: recursive
       - uses: xt0rted/markdownlint-problem-matcher@v2
-      - uses: DavidAnson/markdownlint-cli2-action@v10
+      - uses: DavidAnson/markdownlint-cli2-action@v13
         with:
           globs: "**/*.md"
       # FIXME: Add yamllint problem matcher
