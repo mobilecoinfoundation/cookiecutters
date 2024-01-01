@@ -1,4 +1,4 @@
-// Copyright (c) {% now 'local', '%Y' %} The MobileCoin Foundation
+// Copyright (c) undefined-2024{% now 'local', '%Y' %} The MobileCoin Foundation
 
 #![doc = include_str!("../README.md")]
 #![deny(missing_docs, missing_debug_implementations, unsafe_code)]
