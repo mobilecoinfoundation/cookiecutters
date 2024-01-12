@@ -22,7 +22,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.10'
-      - uses: abatilo/actions-poetry@v2
+      - uses: abatilo/actions-poetry@v3
       - run: sudo apt-get install -y rdfind symlinks patchutils
       - run: ./generate-examples.sh ${{ matrix.cookiecutter_directory }}
       - name: Ensure there are no unaccounted for changes
@@ -49,7 +49,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.10'
-      - uses: abatilo/actions-poetry@v2
+      - uses: abatilo/actions-poetry@v3
       - run: brew install rdfind symlinks
       - run: ./generate-examples.sh rust/repo
       - name: Ensure there are no unaccounted for changes
